@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/posts/202311283.html</loc>
+    <loc>https://wenblog.org.edu.kg/posts/202311282.html</loc>
     
     <lastmod>2023-11-18</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/posts/202311282.html</loc>
+    <loc>https://wenblog.org.edu.kg/posts/202311283.html</loc>
     
     <lastmod>2023-11-18</lastmod>
     
@@ -65,36 +65,9 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
+    <loc>https://wenblog.org.edu.kg/posts/2013454d.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-10-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -102,6 +75,15 @@
   
   <url>
     <loc>https://wenblog.org.edu.kg/tags/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -119,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/life/movies/index.html</loc>
+    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -128,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/site/census/index.html</loc>
+    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -137,43 +119,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/personal/bb/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/personal/love/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/social/fcircle/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/site/time/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/social/link/index.html</loc>
+    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -191,9 +137,63 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/posts/2013454d.html</loc>
+    <loc>https://wenblog.org.edu.kg/life/movies/index.html</loc>
     
-    <lastmod>2022-10-23</lastmod>
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/personal/bb/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/social/fcircle/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/personal/love/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/social/link/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/site/time/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/site/census/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
