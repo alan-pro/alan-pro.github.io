@@ -2,7 +2,7 @@
 
 本站采用Hexo+Github搭建个人博客，采用Fomalhaut博主的模板，在此表示感谢🥰！
 
-欢迎访问❤️https://wenblog.org.edu.kg/❤️
+欢迎访问https://wenblog.org.edu.kg/
 
 
 
