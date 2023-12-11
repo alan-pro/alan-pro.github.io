@@ -9476,9 +9476,9 @@ hr:before {
   left: 24px;
   content: "picsum随机壁纸";
 }
-#waiBizhiBox::before {
+#yinghuaBox::before {
   left: 34px;
-  content: "小歪高清壁纸";
+  content: "樱花壁纸";
 }
 #btstuBox::before {
   left: 34px;
@@ -9487,6 +9487,14 @@ hr:before {
 #unsplashBox::before {
   left: 15px;
   content: "Unsplash随机壁纸";
+}
+#baoluoBox::before {
+  left: 34px;
+  content: "保罗壁纸";
+}
+#yingdaoBox::before {
+  left: 15px;
+  content: "樱道壁纸";
 }
 
 /* 评论区圆角 */

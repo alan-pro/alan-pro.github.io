@@ -54,7 +54,7 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | 文の博客🥝")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | 学文の博客🥝")[0];
 }
 
 function scrollToTop() {
@@ -1119,17 +1119,18 @@ function createtime1() {
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到文の博客🥝!`,
+    `欢迎来到学文の博客🥝!`,
     `Future is now 🍭🍭🍭`,
     `
-    _____  .__                                               
-    /  _  \ |  | _____    ____           _____________  ____  
-   /  /_\  \|  | \__  \  /    \   ______ \____ \_  __ \/  _ \ 
-  /    |    \  |__/ __ \|   |  \ /_____/ |  |_> >  | \(  <_> )
-  \____|__  /____(____  /___|  /         |   __/|__|   \____/ 
-          \/          \/     \/          |__|                 
-                                            
-`,
+    .       .         
+    \\'-"'"-'/
+     } 6 6 {    
+    =.  Y  .=   
+      /^^^\\  .
+     /     \\  )           
+    (  )-(  )/ 
+     ""   ""       
+     `,
     "小站已经苟活",
     dnum,
     "天啦!",
@@ -2986,7 +2987,7 @@ function setUniverse() {
 
 // 雪花开关
 if (localStorage.getItem("snow") == undefined) {
-  localStorage.setItem("snow", "none");
+  localStorage.setItem("snow", "block");
 }
 document.getElementById("snow").style.display = localStorage.getItem("snow");
 function setSnow() {
@@ -3159,8 +3160,8 @@ let seovx = "url(https://cdn.seovx.com/?mom=302)";
 let picsum = "url(https://picsum.photos/1920/1080.webp)";
 // 保罗
 let baoluo = "url(https://api.paugram.com/wallpaper/)";
-// 晓晴博客
-let xiaoqingboke = "url(https://acg.toubiec.cn/random.php)";
+// 樱道随机图片
+let yingdao = "url(https://api.r10086.com/樱道随机图片api接口.php?图片系列=动漫综合2)";
 //  樱花壁纸
 let yinghua = "url(https://www.dmoe.cc/random.php)";
 // 博天随机
@@ -3176,10 +3177,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/dm14.webp);
-    --darkmode-bg:url(https://lskypro.acozycotage.net/Fomalhaut/img/yuanshen1.webp);
-    --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
-    --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
+    --default-bg: url(https：//www.loliapi.com/acg/);
+    --darkmode-bg:url(https：//www.loliapi.com/acg/);
+    --mobileday-bg: url(https：//www.loliapi.com/acg/);
+    --mobilenight-bg: url(https：//www.loliapi.com/acg/);
   }`;
 }
 // 切换背景主函数
@@ -3458,7 +3459,7 @@ function createWinbox() {
 <h3>7. 壁纸API</h3>
 <details class="folding-tag" cyan><summary> 查看壁纸API系列背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="EEEDogBox" rel="noopener external nofollow" style="background-image: ${EEEDog}" class="box apiBox" onclick="changeBg('${EEEDog}')"></a><a id="seovxBox" rel="noopener external nofollow" style="background-image: ${seovx}" class="box apiBox" onclick="changeBg('${seovx}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="yinghuaBox" rel="noopener external nofollow" style="background-image: ${yinghua}" class="box apiBox" onclick="changeBg('${yinghua}')"></a><a id="btstuBox" rel="noopener external nofollow" style="background-image: ${btstu}" class="box apiBox" onclick="changeBg('${btstu}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a><a id="baoluoBox" rel="noopener external nofollow" style="background-image: ${baoluo}" class="box apiBox" onclick="changeBg('${baoluo}')"></a><a id="xiaoqingbokeBox" rel="noopener external nofollow" style="background-image: ${xiaoqingboke}" class="box apiBox" onclick="changeBg('${xiaoqingboke}')"></a></div>
+              <div class="bgbox"><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="EEEDogBox" rel="noopener external nofollow" style="background-image: ${EEEDog}" class="box apiBox" onclick="changeBg('${EEEDog}')"></a><a id="seovxBox" rel="noopener external nofollow" style="background-image: ${seovx}" class="box apiBox" onclick="changeBg('${seovx}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="yinghuaBox" rel="noopener external nofollow" style="background-image: ${yinghua}" class="box apiBox" onclick="changeBg('${yinghua}')"></a><a id="btstuBox" rel="noopener external nofollow" style="background-image: ${btstu}" class="box apiBox" onclick="changeBg('${btstu}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a><a id="baoluoBox" rel="noopener external nofollow" style="background-image: ${baoluo}" class="box apiBox" onclick="changeBg('${baoluo}')"></a><a id="yingdaoBox" rel="noopener external nofollow" style="background-image: ${yingdao}" class="box apiBox" onclick="changeBg('${yingdao}')"></a></div>
               </div>
             </details>
 
