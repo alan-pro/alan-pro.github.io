@@ -2,43 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
-    
-    <lastmod>2023-12-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wenblog.org.edu.kg/tags/index.html</loc>
-    
-    <lastmod>2023-12-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
-    
-    <lastmod>2023-12-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
-    
-    <lastmod>2023-12-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
     
     <lastmod>2023-12-28</lastmod>
     
@@ -146,7 +110,43 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/posts/c6767314.html</loc>
+    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
+    
+    <lastmod>2023-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
+    
+    <lastmod>2023-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
+    
+    <lastmod>2023-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
+    
+    <lastmod>2023-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/posts/8aba471a.html</loc>
     
     <lastmod>2023-12-26</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/posts/c3f7cdb7.html</loc>
+    <loc>https://wenblog.org.edu.kg/posts/d394935c.html</loc>
     
     <lastmod>2023-12-25</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/posts/d479611d.html</loc>
+    <loc>https://wenblog.org.edu.kg/posts/6c6cdbe3.html</loc>
     
     <lastmod>2023-12-25</lastmod>
     
