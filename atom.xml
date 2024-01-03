@@ -262,34 +262,6 @@ l(x)=&#92;begin{cases}&lt;br&gt;
   </entry>
   
   <entry>
-    <title>4 基础优化算法</title>
-    <link href="https://wenblog.org.edu.kg/posts/d46fc631.html"/>
-    <id>https://wenblog.org.edu.kg/posts/d46fc631.html</id>
-    <published>2023-11-18T10:19:03.000Z</published>
-    <updated>2023-11-18T10:19:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>梯度下降</h1><ul><li><p>梯度下降是求一个损失函数的最小值，在梯度下降最快的方向迭代，获得相关参数。</p><p><a href="https://postimg.cc/k2c4td9b"><img src="https://i.postimg.cc/0NgJF8Bc/1-1701312779980-4.png" alt="1-1701312779980-4.png"></a></p></li><li><p>举个例子：在$x_0$处，梯度为$\partial f(x^0)= \frac{\partial{f(x_0)}}{\partial{x_0}}$，$x_0$与$-\partial f(x^0)$相加，可以得到向左移动一段距离的新向量$x_1$，随后不断迭代，可以找到最低点，此时为最小值。<br>$$<br>x_1=x_0-n\frac{\partial{f(x)}}{\partial{x_0}}<br>$$<br>n为步长，可以控制移动距离。</p></li><li><p>挑选一个合适的初始值$w_0$</p></li><li><p>重复迭代参数t=1,2,3,…<br>$$<br>w_t=w_{t-1}-\eta \frac{\partial{\ell}}{\partial{\ell{w_{t-1}}}}<br>$$</p></li><li><p>沿梯度方向将增加损失函数值</p></li><li><p>学习率：步长的超参数</p></li><li><p>$\eta$不能太大，也不能太小</p></li></ul><h2 id="小批量随机梯度下降">小批量随机梯度下降</h2><ul><li><p>我们可以随机采样n个样本$i_1,i_2,…,i_b$来近似损失<br>$$<br>\frac{1}{b}\sum_{i\in I_b}\ell(x_i,y_i,w)<br>$$</p></li><li><p>b是批量大小，另一个重要的超参数，也不能太大太小</p></li></ul><h2 id="总结">总结</h2><ul><li>梯度下降通过不断沿着反梯度方向更新参数求解</li><li>小批量随机梯度下降是深度学习默认的求解方式</li><li>两个重要的超参数是批量大小和学习率</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;梯度下降&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;梯度下降是求一个损失函数的最小值，在梯度下降最快的方向迭代，获得相关参数。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://postimg.cc/k2c4td9b&quot;&gt;&lt;img src=&quot;https://i.postimg.cc</summary>
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://wenblog.org.edu.kg/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="https://wenblog.org.edu.kg/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>3 线性回归</title>
     <link href="https://wenblog.org.edu.kg/posts/8e3ee5a3.html"/>
     <id>https://wenblog.org.edu.kg/posts/8e3ee5a3.html</id>
@@ -310,6 +282,34 @@ $$&lt;br&gt;
 y=w_1x_1+w_2x_2+w_3x_3+b&lt;br&gt;
 $$&lt;br&gt;
 w1,w2,w3是权重，b是偏差，权重和偏差的实</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4 基础优化算法</title>
+    <link href="https://wenblog.org.edu.kg/posts/d46fc631.html"/>
+    <id>https://wenblog.org.edu.kg/posts/d46fc631.html</id>
+    <published>2023-11-18T10:19:03.000Z</published>
+    <updated>2023-11-18T10:19:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>梯度下降</h1><ul><li><p>梯度下降是求一个损失函数的最小值，在梯度下降最快的方向迭代，获得相关参数。</p><p><a href="https://postimg.cc/k2c4td9b"><img src="https://i.postimg.cc/0NgJF8Bc/1-1701312779980-4.png" alt="1-1701312779980-4.png"></a></p></li><li><p>举个例子：在$x_0$处，梯度为$\partial f(x^0)= \frac{\partial{f(x_0)}}{\partial{x_0}}$，$x_0$与$-\partial f(x^0)$相加，可以得到向左移动一段距离的新向量$x_1$，随后不断迭代，可以找到最低点，此时为最小值。<br>$$<br>x_1=x_0-n\frac{\partial{f(x)}}{\partial{x_0}}<br>$$<br>n为步长，可以控制移动距离。</p></li><li><p>挑选一个合适的初始值$w_0$</p></li><li><p>重复迭代参数t=1,2,3,…<br>$$<br>w_t=w_{t-1}-\eta \frac{\partial{\ell}}{\partial{\ell{w_{t-1}}}}<br>$$</p></li><li><p>沿梯度方向将增加损失函数值</p></li><li><p>学习率：步长的超参数</p></li><li><p>$\eta$不能太大，也不能太小</p></li></ul><h2 id="小批量随机梯度下降">小批量随机梯度下降</h2><ul><li><p>我们可以随机采样n个样本$i_1,i_2,…,i_b$来近似损失<br>$$<br>\frac{1}{b}\sum_{i\in I_b}\ell(x_i,y_i,w)<br>$$</p></li><li><p>b是批量大小，另一个重要的超参数，也不能太大太小</p></li></ul><h2 id="总结">总结</h2><ul><li>梯度下降通过不断沿着反梯度方向更新参数求解</li><li>小批量随机梯度下降是深度学习默认的求解方式</li><li>两个重要的超参数是批量大小和学习率</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;梯度下降&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;梯度下降是求一个损失函数的最小值，在梯度下降最快的方向迭代，获得相关参数。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://postimg.cc/k2c4td9b&quot;&gt;&lt;img src=&quot;https://i.postimg.cc</summary>
       
     
     
