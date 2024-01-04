@@ -6,7 +6,7 @@
   <link href="https://wenblog.org.edu.kg/atom.xml" rel="self"/>
   
   <link href="https://wenblog.org.edu.kg/"/>
-  <updated>2023-12-26T10:19:03.000Z</updated>
+  <updated>2024-01-04T18:17:31.000Z</updated>
   <id>https://wenblog.org.edu.kg/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献</title>
+    <link href="https://wenblog.org.edu.kg/posts/55e29a83.html"/>
+    <id>https://wenblog.org.edu.kg/posts/55e29a83.html</id>
+    <published>2024-01-04T18:17:31.000Z</published>
+    <updated>2024-01-04T18:17:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Agent-Attention</h1><p>论文地址: <a href="https://arxiv.org/pdf/2312.08874.pdf">https://arxiv.org/pdf/2312.08874.pdf</a><br>代码地址: <a href="https://github.com/LeapLabTHU/Agent-Attention">https://github.com/LeapLabTHU/Agent-Attention</a><br>公众号:<br>公众号-&gt; 小橘人工智能实验室<br>视频讲解: B站-&gt; 小橘人工智能</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;Agent-Attention&lt;/h1&gt;
+&lt;p&gt;论文地址: &lt;a href=&quot;https://arxiv.org/pdf/2312.08874.pdf&quot;&gt;https://arxiv.org/pdf/2312.08874.pdf&lt;/a&gt;&lt;br&gt;
+代码地址: &lt;a href=</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>9 卷积神经网络</title>

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>文献</title>
+      <link href="/posts/55e29a83.html"/>
+      <url>/posts/55e29a83.html</url>
+      
+        <content type="html"><![CDATA[<h1>Agent-Attention</h1><p>论文地址: <a href="https://arxiv.org/pdf/2312.08874.pdf">https://arxiv.org/pdf/2312.08874.pdf</a><br>代码地址: <a href="https://github.com/LeapLabTHU/Agent-Attention">https://github.com/LeapLabTHU/Agent-Attention</a><br>公众号:<br>公众号-&gt; 小橘人工智能实验室<br>视频讲解: B站-&gt; 小橘人工智能</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>9 卷积神经网络</title>
       <link href="/posts/8aba471a.html"/>
       <url>/posts/8aba471a.html</url>
