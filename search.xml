@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>小样本分类</title>
+      <link href="/posts/ce4894d8.html"/>
+      <url>/posts/ce4894d8.html</url>
+      
+        <content type="html"><![CDATA[<h1>关于小样本分类的一些想法</h1><h3 id="切入点">切入点</h3><ul><li>通过数据增强方法增加训练集样本数量，如图像翻转</li><li>通过迁移学习的预训练方法，在预训练模型的训练的权重下继续训练。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文献</title>
       <link href="/posts/55e29a83.html"/>
       <url>/posts/55e29a83.html</url>

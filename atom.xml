@@ -6,7 +6,7 @@
   <link href="https://wenblog.org.edu.kg/atom.xml" rel="self"/>
   
   <link href="https://wenblog.org.edu.kg/"/>
-  <updated>2024-01-04T18:17:31.000Z</updated>
+  <updated>2024-01-06T20:14:40.000Z</updated>
   <id>https://wenblog.org.edu.kg/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小样本分类</title>
+    <link href="https://wenblog.org.edu.kg/posts/ce4894d8.html"/>
+    <id>https://wenblog.org.edu.kg/posts/ce4894d8.html</id>
+    <published>2024-01-06T20:14:40.000Z</published>
+    <updated>2024-01-06T20:14:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>关于小样本分类的一些想法</h1><h3 id="切入点">切入点</h3><ul><li>通过数据增强方法增加训练集样本数量，如图像翻转</li><li>通过迁移学习的预训练方法，在预训练模型的训练的权重下继续训练。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;关于小样本分类的一些想法&lt;/h1&gt;
+&lt;h3 id=&quot;切入点&quot;&gt;切入点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;通过数据增强方法增加训练集样本数量，如图像翻转&lt;/li&gt;
+&lt;li&gt;通过迁移学习的预训练方法，在预训练模型的训练的权重下继续训练。&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>文献</title>
