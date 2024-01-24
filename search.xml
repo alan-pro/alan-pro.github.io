@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Transformer</title>
+      <link href="/posts/e0d2147a.html"/>
+      <url>/posts/e0d2147a.html</url>
+      
+        <content type="html"><![CDATA[<h1>1、Transformer架构</h1><ul><li><p>采用编码器-解码器架构</p></li><li><p>transformer是纯基于注意力机制<br>$$<br>Attention(Q,K,V) = softmax(\frac {QK^T}{\sqrt{d_k}})V<br>$$</p><ul><li>Q(query)查询序列</li><li>K(key)待查序列</li><li>V（value）自身含义编码序列</li></ul></li><li><p>Q和K进行点乘（内积），点乘的结果是一个向量在另一向量投影的长度，它是一个标量，它可以反映两个向量的相似度，两个向量点乘结果越大，它们的相似度越高，距离越近，越关注。</p></li><li><p>为了防止其结果过大，再除以$\sqrt {d_k}$ ，也就是K向量的维度。</p></li><li><p>再使用Softmax回归将结果归一化为概率分布，乘以V就得到了加权求和形式。</p></li></ul><h1>2、网络结构</h1><p><img src="https://i.postimg.cc/KYNmf6hP/1706011879.png" alt="网络结构"></p><h2 id="2-1-encoding-部分">2.1 encoding 部分</h2><ul><li>位置编码</li><li>多头注意力机制</li><li>前馈神经网络</li></ul><p>其中，Add表示残差连接，Norm表示layer normalize(层归一化)</p><h2 id="2-2-decoding部分">2.2 decoding部分</h2><ul><li><p>Mask(掩码)</p></li><li><p>线性层和softmax层</p><p>线性层相当于一个全连接神经网络</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小样本分类</title>
       <link href="/posts/ce4894d8.html"/>
       <url>/posts/ce4894d8.html</url>
