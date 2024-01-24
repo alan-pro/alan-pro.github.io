@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>博客bug</title>
+      <link href="/posts/b11f753d.html"/>
+      <url>/posts/b11f753d.html</url>
+      
+        <content type="html"><![CDATA[<h1>1、ssh: connect to host <a href="http://github.com">github.com</a> port 22: Connection timed out</h1><p>原因：22端口被占用<br>解决：在.ssh下面建立config文件，内容如下：注意congig无后缀名！（可以直接复制另外两个无后缀名的文件然后直接改内容即可）</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line"><span class="keyword">User</span> <span class="title">git</span></span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port <span class="number">443</span></span><br><span class="line"> </span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line"><span class="keyword">User</span> <span class="title">git</span></span><br><span class="line">Port <span class="number">443</span></span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure><p>最后使用下列代码验证，出现<code>You've successfully authenticated, but GitHub does not provide shell access.</code>，则成功连接。</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh</span> -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Transformer</title>
       <link href="/posts/e0d2147a.html"/>
       <url>/posts/e0d2147a.html</url>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
+    <loc>https://wenblog.org.edu.kg/posts/b11f753d.html</loc>
     
     <lastmod>2024-01-24</lastmod>
     
@@ -12,33 +12,6 @@
   
   <url>
     <loc>https://wenblog.org.edu.kg/tags/index.html</loc>
-    
-    <lastmod>2024-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
-    
-    <lastmod>2024-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
-    
-    <lastmod>2024-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
     
     <lastmod>2024-01-24</lastmod>
     
@@ -138,6 +111,42 @@
   
   <url>
     <loc>https://wenblog.org.edu.kg/social/link/index.html</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
     
     <lastmod>2024-01-24</lastmod>
     
