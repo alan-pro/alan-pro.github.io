@@ -6,7 +6,7 @@
   <link href="https://wenblog.org.edu.kg/atom.xml" rel="self"/>
   
   <link href="https://wenblog.org.edu.kg/"/>
-  <updated>2024-01-24T13:29:14.000Z</updated>
+  <updated>2024-02-22T10:10:41.000Z</updated>
   <id>https://wenblog.org.edu.kg/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FCN语义分割的开山之作</title>
+    <link href="https://wenblog.org.edu.kg/posts/464d9cb7.html"/>
+    <id>https://wenblog.org.edu.kg/posts/464d9cb7.html</id>
+    <published>2024-02-22T10:10:41.000Z</published>
+    <updated>2024-02-22T10:10:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>一、深度学习代表问题</h1><h1>不匹配关系：SPP，ASPP、PSPNet、GFN、GCN等</h1><p>只注重局部纹理，不考虑全局关系，而将对象错分。</p><h1>不寻常类：RedNet、RDFNet</h1><p>对象纹理与背景颜色纹理相似或相同，难以区分。</p><h1>二、基础概念</h1><h3 id="1、conv卷积">1、conv卷积</h3><p><img src="https://img-blog.csdnimg.cn/20190618210936489.gif" alt=""></p><p><strong>过滤器</strong></p><table><thead><tr><th>1</th><th>0</th><th>1</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>1</td></tr></tbody></table><p>结果第一个数：4=1x1+1x0+1x1+0x0+1x1+1x0+0x1+0x0+1x1</p><h3 id="2、maxpool最大池化">2、maxpool最大池化</h3><p>若池化使用的滤波器是2x2，则取该对应区域内最大像素值替代该像素值。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;一、深度学习代表问题&lt;/h1&gt;
+&lt;h1&gt;不匹配关系：SPP，ASPP、PSPNet、GFN、GCN等&lt;/h1&gt;
+&lt;p&gt;只注重局部纹理，不考虑全局关系，而将对象错分。&lt;/p&gt;
+&lt;h1&gt;不寻常类：RedNet、RDFNet&lt;/h1&gt;
+&lt;p&gt;对象纹理与背景颜色纹理相似或相同，难</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>博客bug</title>
