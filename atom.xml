@@ -6,7 +6,7 @@
   <link href="https://wenblog.org.edu.kg/atom.xml" rel="self"/>
   
   <link href="https://wenblog.org.edu.kg/"/>
-  <updated>2024-02-22T10:10:41.000Z</updated>
+  <updated>2024-02-25T14:47:19.000Z</updated>
   <id>https://wenblog.org.edu.kg/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VisionTransformer快速指南-理论和代码</title>
+    <link href="https://wenblog.org.edu.kg/posts/be423323.html"/>
+    <id>https://wenblog.org.edu.kg/posts/be423323.html</id>
+    <published>2024-02-25T14:47:19.000Z</published>
+    <updated>2024-02-25T14:47:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>0、ViT简介</h1><p><img src="https://i.postimg.cc/BQZH7s2d/1708844417.png" alt=""></p><h1>1、输入嵌入</h1><p><img src="https://i.postimg.cc/J4PP6sJV/1708843905.png" alt=""></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;0、ViT简介&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.postimg.cc/BQZH7s2d/1708844417.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;1、输入嵌入&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.postimg.cc/J4</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.org.edu.kg/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>FCN语义分割的开山之作</title>

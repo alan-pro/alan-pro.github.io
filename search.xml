@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>VisionTransformer快速指南-理论和代码</title>
+      <link href="/posts/be423323.html"/>
+      <url>/posts/be423323.html</url>
+      
+        <content type="html"><![CDATA[<h1>0、ViT简介</h1><p><img src="https://i.postimg.cc/BQZH7s2d/1708844417.png" alt=""></p><h1>1、输入嵌入</h1><p><img src="https://i.postimg.cc/J4PP6sJV/1708843905.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FCN语义分割的开山之作</title>
       <link href="/posts/464d9cb7.html"/>
       <url>/posts/464d9cb7.html</url>
