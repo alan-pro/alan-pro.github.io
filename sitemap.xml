@@ -11,43 +11,7 @@
   </url>
   
   <url>
-    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
-    
-    <lastmod>2024-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wenblog.org.edu.kg/tags/index.html</loc>
-    
-    <lastmod>2024-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
-    
-    <lastmod>2024-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
-    
-    <lastmod>2024-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
     
     <lastmod>2024-04-01</lastmod>
     
@@ -147,6 +111,42 @@
   
   <url>
     <loc>https://wenblog.org.edu.kg/social/link/index.html</loc>
+    
+    <lastmod>2024-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/categories/index.html</loc>
+    
+    <lastmod>2024-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/animation/index.html</loc>
+    
+    <lastmod>2024-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/gallery/index.html</loc>
+    
+    <lastmod>2024-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenblog.org.edu.kg/box/nav/index.html</loc>
     
     <lastmod>2024-04-01</lastmod>
     
