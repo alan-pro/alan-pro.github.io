@@ -1134,7 +1134,7 @@ function createtime1() {
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2023 By 学文の博客",
+    "©2024 By 学文の博客",
   ];
 
   setTimeout(
