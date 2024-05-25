@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>bug</title>
+      <link href="/posts/358cbf14.html"/>
+      <url>/posts/358cbf14.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ViT模型详解</title>
       <link href="/posts/9336d039.html"/>
       <url>/posts/9336d039.html</url>
