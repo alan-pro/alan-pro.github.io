@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于python的一些问题</title>
+      <link href="/posts/4bfb6141.html"/>
+      <url>/posts/4bfb6141.html</url>
+      
+        <content type="html"><![CDATA[<h1>python问题</h1><ul><li><p>相对引用问题</p></li><li><pre><code>from ..modeling.image_encoder import DTEncoder<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```  <span class="built_in">shell</span></span><br><span class="line">ImportError: attempted <span class="built_in">relative</span> import <span class="keyword">with</span> no known parent package</span><br></pre></td></tr></table></figure></code></pre></li></ul><p>解决：</p><p><img src="https://i.postimg.cc/jSYj7ssb/1719669469.png" alt=""></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在上一级设为Sources，要引用下级文件直接用绝对路径引用</span><br></pre></td></tr></table></figure><p><img src="https://i.postimg.cc/DzMQFJTh/1719669749.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MEA-EFFormer</title>
       <link href="/posts/d3bdf607.html"/>
       <url>/posts/d3bdf607.html</url>
