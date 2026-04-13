@@ -17,33 +17,6 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Agent开发（智能体）</title>
-    <link href="https://wenblog.top/posts/68b27003.html"/>
-    <id>https://wenblog.top/posts/68b27003.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
-&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python八股文1</title>
     <link href="https://wenblog.top/posts/68b27004.html"/>
     <id>https://wenblog.top/posts/68b27004.html</id>
@@ -98,23 +71,22 @@
   </entry>
   
   <entry>
-    <title>python开发1Redis</title>
-    <link href="https://wenblog.top/posts/68b27007.html"/>
-    <id>https://wenblog.top/posts/68b27007.html</id>
+    <title>python八股文3</title>
+    <link href="https://wenblog.top/posts/68b27006.html"/>
+    <id>https://wenblog.top/posts/68b27006.html</id>
     <published>2025-03-25T20:01:16.000Z</published>
     <updated>2025-03-25T20:01:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h1>1.Redis</h1><p><strong>Redis是一个高性能的Key-Value数据库</strong></p><ul><li>C语言编写的</li><li>实习缓存、队列系统的不同角色</li><li>中文网站（<a href="http://redis.cn">redis.cn</a>）</li></ul><h2 id="Redis特性（同其它可以-value缓存产品）">Redis特性（同其它可以-value缓存产品）</h2><ul><li>支持数据的持久化，即将内存的数据保存在磁盘上，重启时可再次加载</li><li>Redis不仅仅支持简单的kv类型的数据，还可提供list、set、zset、hash等数据结构的存储</li><li>支持数据备份，即master-slave模式的数据备份</li></ul><h2 id="Redis优势">Redis优势</h2><ul><li>性能极高</li><li>丰富的数据类型----支持二进制的Strings（字符串），Lists（列表），Hashes（哈希表），Sets（集合）及Ordered Sets（有序集合）数据类型操作</li><li>所有操作都是原子性的</li><li>丰富的特性—支持publish/subscribe（发布/订阅），通知，key过期等特性</li></ul><h2 id="Redis应用场景">Redis应用场景</h2><ul><li>用作缓存---------所有数据放在内存中（内存数据库）</li><li>特定场景替代传统数据库----比如社交类的应用</li><li>实现特定功能----session共享，购物车</li></ul><h2 id="Redis配置">Redis配置</h2><ul><li><p>查看配置信息：</p><blockquote><p>sudo vi 目录</p></blockquote></li><li><p>绑定ip</p><blockquote><p>bind 127.0.0.1 或真实ip</p></blockquote></li><li><p>端口，默认6379</p><blockquote><p>port 6379</p></blockquote></li><li><p>是否以守护进程运行（后台进程），推荐yes</p><blockquote><p>daemonize yes</p></blockquote></li><li><p>数据文件</p><blockquote><p>dbfilename dump.rdb</p></blockquote></li><li><p>数据文件存储路径</p><blockquote><p>dir /var/lib/redis</p></blockquote></li><li><p>日志文件</p><blockquote><p>logfile “/var/log/redis/redis-server.log”</p></blockquote></li><li><p>数据库默认16个</p><blockquote><p>database 16</p></blockquote></li><li><p>主从复制（双机备份）</p><blockquote><p>slaveof</p></blockquote></li></ul><h1>2.NoSQL</h1><ul><li>非关系型数据库（not only sql）</li><li>不支持sql语法</li><li>nosql存储数据都是kv形式</li><li>nosql数据库语言不通用</li><li>包括：Redis、Mongodb（<strong>蒙戈DB</strong>。“芒果DB”）存文档、Hbase hadoop（<strong>HBase哈杜普</strong>）处理海量数据、Cassandra hadoop（<strong>卡桑德拉 哈杜普</strong>）</li></ul><h2 id="NoSQL与SQL数据库区别：">NoSQL与SQL数据库区别：</h2><ul><li>sql数据库适用于关系特别复杂的数据查询场景，nosql反之；</li><li>sql对事务（要么一起成功，要么一起失败）的支持非常完善，nosql基本不支持事务</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1>1.新意互动–python全栈实习生</h1><h2 id="岗位需求">岗位需求:</h2><p>1.熟悉agent搭建及后端开发，有相关项目经历</p><p>2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验</p><p>3.熟悉python，pytorch，使用过知识库，了解RAG的基本原理，熟悉一些经典的机器学习算法，有一定的前后端API开发经验</p><h1>2.理想汽车–后端开发实习生（python）</h1><h2 id="岗位职责">岗位职责:</h2><p>1.飞书生态开发:<br>（1)基于飞书开放平台SDK,参与应用后端API开发与维护<br>(2)设计并实现飞书机器人、消息推送等场景化功能模块<br>2.效率工具开发<br>（1）开发自动化工具，集成飞书API实现业务场景提效<br>(2)参与微服务架构设计，协助搭建高可用后端服务，优化接口性能<br>3.技术文档编写<br>(1)输出模块设计文档、接口文档及SDK使用指南</p><h2 id="任职要求">任职要求:</h2><h3 id="硬性要求">硬性要求</h3><p>1.熟练掌握Python语言，理解OOP、异步编程及常用设计模式<br>2.熟悉至少一个Web框架(Django/Flask/FastAPl)能独立开发RESTful API<br>3.了解HTTP/WebSocket办议，熟悉Postman/Swagger等调试工具<br>4.具备基础数据库知识，能熟练使用MySQL/Redis/MongoDB中的至少一种</p><ul><li></li></ul><p>1.有飞书开放平台开发经验，熟悉事件订阅/消息卡片等机制<br>2.掌握PyTorch/TensorFlow框架，有NLP领域深度学习实践经历</p><h1>3.智百源科技–Python</h1><h2 id="职位详情">职位详情</h2><p>Docker, Django, MySQL, Redis, Linux开发/部署经验, python, java, Flask</p><h3 id="岗位职责-2">岗位职责:</h3><p>1.维护并优化既有产品的Python后端代码;<br>2.完成新产品的后端搭建;<br>3.根据用户的需求，梳理和实现相应的业务逻辑</p><h3 id="岗位要求">岗位要求:</h3><p>1.本科、研究生及以上学历,计算机相关专业在校生;<br>2.每周能保证至少3天的实习时间，实习期6个月或以上;<br>3.熟练掌握常用的Python后端框架，如Django,Flask等，有相关的项目实践经验，能独立完成相应模块的开发及维护工作;<br>4.有良好的学习能力和沟通能力，积极主动，自驱力强;<br>注：python为主，Java为辅的实习岗位,可以接受再投递简历(实习时间不少于6个月)</p><h1>4.七牛云–AI服务后端研发实习生</h1><h2 id="工作职责">工作职责</h2><p>1、参与AIGC/LLM服务平台的工程架构设计和调研<br>2、参与业务系统的开发和测试;</p><h2 id="职位要求">职位要求</h2><p>1、熟练掌握计算机基础知识,包括但不限于操作系统、计算机网络等;<br>2、具备扎实的编程基础，熟练掌握Golang或Python中一门语言，熟悉主要应用框架;<br>3、熟悉Mysql、Redis、MQ等常用WEB组件并了解基本用法;<br>4、了解LLMAPI/Agent/RAG等架构原理者或发表相关论文者优先;<br>5、优秀的沟通和团队协作能力，具备较强的主动学习和创新能力</p><h1>5.Momenta–python后端开发实习生</h1><h2 id="岗位职责-3">岗位职责</h2><p>1、深度参与自动驾驶数据的数据仓库建设<br>2、参与设计并实现自动驾驶相关数据管理系统等核心内容<br>3、开发自动化平台工具<br>4、提高数据使用效率</p><h2 id="岗位要求-2">岗位要求:</h2><p>1、具备扎实的编程基础、优秀的代码设计能力和品味、热爱编程<br>2、语言以golang、python为主，可以接受java、C、c++或其他语言转golang/python<br>3、熟悉Linux基本常用命令,会编写简单的shel脚本<br>4、良好的计算机基础知识，熟悉I/O,cpu,内存，网络等知识，深刻理解计算机原理、有良好的数据结构和算法基础<br>5、熟悉Mysql、Postgresq1、redis、mongo、消息队列等组件</p><h1>步刻时光–python实习生</h1><h2 id="职位详情-2">职位详情</h2><p>python, MySQL, Redis, Flask</p><h2 id="任职要求-2">任职要求:</h2><p>1.熟练使用python,flask fastapi,celery等库<br>2.计算机相关专业，本科或者研究生在校生，实习<br>3.熟悉Linux操作系统，熟练使用Linux相关命令<br>4.有扎实的编程功底，具有良好代码编写习惯善于编写技术文档<br>5.具有良好的人际沟通能力，团队协作能力，思维敏捷<br>6.认真负责</p><h2 id="岗位职责-4">岗位职责:</h2><p>1.参与Flask API,ETL,Amazon接口开发<br>2.协同其他开发人员的工作<br>3.认真负责</p><h1>千渊科技–python开发实习生(大模型应用)</h1><h2 id="岗位职责-5">岗位职责</h2><p>1.负责公司大模型平台和Agent框架以及comfyui节点插件等多个模块的开发和升级工作<br>2.开发维护基于openai等大模型以及工作流如dify和comfyui等在不同行业垂直领域的AI应用。<br>3.能独立完成python项目的开发、调试、部署与上线。<br>4.进行技术调研、可行性分析，系统、流程结构设计、优化、重构。<br>5.重点:熟悉dify源码可以二次开发优先。</p><h2 id="主要技能">主要技能</h2><p>1.熟悉常见的Python Web技术栈,Flask,Diango,ZeroRPC等，能独立完成python项目开发<br>2.精通常见的数据库技术, MySQL,Redis,Rocketmq等，并具备实际的业务落地经验;<br>3.熟悉同步，异步，多线程、socket相关技术，有分布式系统的开发实践经验;<br>4.熟练使用软件设计模式。<br>5.愿意尝试新技术。<br>6.有prompt优化经验。</p><h1>蓝景教育咨询–AI/应用开发实习生</h1><h2 id="职位描述">职位描述</h2><p>1.负责搭建和优化多模态EMIBEDDING模型，用于RAG的向量化知识库的构建与管理，并与微信平台进行集成。<br>2.处理和向量化不同类型的数据，包括文字、图片等，确保RAG模型在不同输入下都能高效检索相关数据。<br>3.负责数据库的优化和维护，采用SQL、FAISS、Milvus等工具进行数据存储和高效检索<br>4.涉及RPA (如影刀）自动化开发，支持大模型的训练与部署，优化API接口调用。<br>5.精通FastGPT、Dify等应用框架，具备LLaMA-Factory、Swift等训练框架的使用经验<br>6.具备分布式训练的经验,熟悉Deepspeed等框架，能够对训练过程中涉及的各种参数进行调优.</p><h2 id="任职要求-3">任职要求:</h2><p>1.本科及以上学历，计算机科学、人工智能、数据科学等相关专业。<br>2.深入了解大模型的训练和部署，具备API接口调用及FastGPT、Dify等应用框架的RAG实战经<br>3.熟悉LLaMA-Factory、Swif等训练框架，最好有分布式训练经验(如Deepspeed)<br>4.精通各类训练数据集，如IDPO、RLHF、PPO等，并熟悉SFT训练方法。<br>5.熟悉多模态数据处理，能够高效地处理和向量化文本、图片数据。<br>6.具备一定的AI模型接入经验，尤其是如何将模型与微信平台(包括企业微信、个人微信、公众号、小程序)结合。<br>7.有较强的主观学习能力和好奇心，能够快速理解并解决技术难题。<br>8.具备较好的团队协作和沟通能力，能够与不同部门进行有效合作。</p><h2 id="技能需求">技能需求:</h2><p>-技术栈：FAISS、Milvus、SQL(MySQL/PostgreSQL等）、Python、RAG<br>-经验要求:向量化模型(如BERT、CLIP等)应用、数据库设计与优化,RAG搭建;大模型训练与部署、API接口调用。<br>-接入技术:微信API、微信小程序开发、企业微信开发<br>其他：良好的沟通能力，能与跨部门团队协作具备强烈的学习兴趣和解决问题的能力</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1&gt;1.Redis&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Redis是一个高性能的Key-Value数据库&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;C语言编写的&lt;/li&gt;
-&lt;li&gt;实习缓存、队列系统的不同角色&lt;/li&gt;
-&lt;li&gt;中文网站（&lt;a href=&quot;http://redi</summary>
+    <summary type="html">&lt;h1&gt;1.新意互动–python全栈实习生&lt;/h1&gt;
+&lt;h2 id=&quot;岗位需求&quot;&gt;岗位需求:&lt;/h2&gt;
+&lt;p&gt;1.熟悉agent搭建及后端开发，有相关项目经历&lt;/p&gt;
+&lt;p&gt;2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验&lt;/p&gt;
+&lt;p&gt;3.</summary>
       
     
     
@@ -217,34 +189,6 @@
   </entry>
   
   <entry>
-    <title>python八股文3</title>
-    <link href="https://wenblog.top/posts/68b27006.html"/>
-    <id>https://wenblog.top/posts/68b27006.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>1.新意互动–python全栈实习生</h1><h2 id="岗位需求">岗位需求:</h2><p>1.熟悉agent搭建及后端开发，有相关项目经历</p><p>2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验</p><p>3.熟悉python，pytorch，使用过知识库，了解RAG的基本原理，熟悉一些经典的机器学习算法，有一定的前后端API开发经验</p><h1>2.理想汽车–后端开发实习生（python）</h1><h2 id="岗位职责">岗位职责:</h2><p>1.飞书生态开发:<br>（1)基于飞书开放平台SDK,参与应用后端API开发与维护<br>(2)设计并实现飞书机器人、消息推送等场景化功能模块<br>2.效率工具开发<br>（1）开发自动化工具，集成飞书API实现业务场景提效<br>(2)参与微服务架构设计，协助搭建高可用后端服务，优化接口性能<br>3.技术文档编写<br>(1)输出模块设计文档、接口文档及SDK使用指南</p><h2 id="任职要求">任职要求:</h2><h3 id="硬性要求">硬性要求</h3><p>1.熟练掌握Python语言，理解OOP、异步编程及常用设计模式<br>2.熟悉至少一个Web框架(Django/Flask/FastAPl)能独立开发RESTful API<br>3.了解HTTP/WebSocket办议，熟悉Postman/Swagger等调试工具<br>4.具备基础数据库知识，能熟练使用MySQL/Redis/MongoDB中的至少一种</p><ul><li></li></ul><p>1.有飞书开放平台开发经验，熟悉事件订阅/消息卡片等机制<br>2.掌握PyTorch/TensorFlow框架，有NLP领域深度学习实践经历</p><h1>3.智百源科技–Python</h1><h2 id="职位详情">职位详情</h2><p>Docker, Django, MySQL, Redis, Linux开发/部署经验, python, java, Flask</p><h3 id="岗位职责-2">岗位职责:</h3><p>1.维护并优化既有产品的Python后端代码;<br>2.完成新产品的后端搭建;<br>3.根据用户的需求，梳理和实现相应的业务逻辑</p><h3 id="岗位要求">岗位要求:</h3><p>1.本科、研究生及以上学历,计算机相关专业在校生;<br>2.每周能保证至少3天的实习时间，实习期6个月或以上;<br>3.熟练掌握常用的Python后端框架，如Django,Flask等，有相关的项目实践经验，能独立完成相应模块的开发及维护工作;<br>4.有良好的学习能力和沟通能力，积极主动，自驱力强;<br>注：python为主，Java为辅的实习岗位,可以接受再投递简历(实习时间不少于6个月)</p><h1>4.七牛云–AI服务后端研发实习生</h1><h2 id="工作职责">工作职责</h2><p>1、参与AIGC/LLM服务平台的工程架构设计和调研<br>2、参与业务系统的开发和测试;</p><h2 id="职位要求">职位要求</h2><p>1、熟练掌握计算机基础知识,包括但不限于操作系统、计算机网络等;<br>2、具备扎实的编程基础，熟练掌握Golang或Python中一门语言，熟悉主要应用框架;<br>3、熟悉Mysql、Redis、MQ等常用WEB组件并了解基本用法;<br>4、了解LLMAPI/Agent/RAG等架构原理者或发表相关论文者优先;<br>5、优秀的沟通和团队协作能力，具备较强的主动学习和创新能力</p><h1>5.Momenta–python后端开发实习生</h1><h2 id="岗位职责-3">岗位职责</h2><p>1、深度参与自动驾驶数据的数据仓库建设<br>2、参与设计并实现自动驾驶相关数据管理系统等核心内容<br>3、开发自动化平台工具<br>4、提高数据使用效率</p><h2 id="岗位要求-2">岗位要求:</h2><p>1、具备扎实的编程基础、优秀的代码设计能力和品味、热爱编程<br>2、语言以golang、python为主，可以接受java、C、c++或其他语言转golang/python<br>3、熟悉Linux基本常用命令,会编写简单的shel脚本<br>4、良好的计算机基础知识，熟悉I/O,cpu,内存，网络等知识，深刻理解计算机原理、有良好的数据结构和算法基础<br>5、熟悉Mysql、Postgresq1、redis、mongo、消息队列等组件</p><h1>步刻时光–python实习生</h1><h2 id="职位详情-2">职位详情</h2><p>python, MySQL, Redis, Flask</p><h2 id="任职要求-2">任职要求:</h2><p>1.熟练使用python,flask fastapi,celery等库<br>2.计算机相关专业，本科或者研究生在校生，实习<br>3.熟悉Linux操作系统，熟练使用Linux相关命令<br>4.有扎实的编程功底，具有良好代码编写习惯善于编写技术文档<br>5.具有良好的人际沟通能力，团队协作能力，思维敏捷<br>6.认真负责</p><h2 id="岗位职责-4">岗位职责:</h2><p>1.参与Flask API,ETL,Amazon接口开发<br>2.协同其他开发人员的工作<br>3.认真负责</p><h1>千渊科技–python开发实习生(大模型应用)</h1><h2 id="岗位职责-5">岗位职责</h2><p>1.负责公司大模型平台和Agent框架以及comfyui节点插件等多个模块的开发和升级工作<br>2.开发维护基于openai等大模型以及工作流如dify和comfyui等在不同行业垂直领域的AI应用。<br>3.能独立完成python项目的开发、调试、部署与上线。<br>4.进行技术调研、可行性分析，系统、流程结构设计、优化、重构。<br>5.重点:熟悉dify源码可以二次开发优先。</p><h2 id="主要技能">主要技能</h2><p>1.熟悉常见的Python Web技术栈,Flask,Diango,ZeroRPC等，能独立完成python项目开发<br>2.精通常见的数据库技术, MySQL,Redis,Rocketmq等，并具备实际的业务落地经验;<br>3.熟悉同步，异步，多线程、socket相关技术，有分布式系统的开发实践经验;<br>4.熟练使用软件设计模式。<br>5.愿意尝试新技术。<br>6.有prompt优化经验。</p><h1>蓝景教育咨询–AI/应用开发实习生</h1><h2 id="职位描述">职位描述</h2><p>1.负责搭建和优化多模态EMIBEDDING模型，用于RAG的向量化知识库的构建与管理，并与微信平台进行集成。<br>2.处理和向量化不同类型的数据，包括文字、图片等，确保RAG模型在不同输入下都能高效检索相关数据。<br>3.负责数据库的优化和维护，采用SQL、FAISS、Milvus等工具进行数据存储和高效检索<br>4.涉及RPA (如影刀）自动化开发，支持大模型的训练与部署，优化API接口调用。<br>5.精通FastGPT、Dify等应用框架，具备LLaMA-Factory、Swift等训练框架的使用经验<br>6.具备分布式训练的经验,熟悉Deepspeed等框架，能够对训练过程中涉及的各种参数进行调优.</p><h2 id="任职要求-3">任职要求:</h2><p>1.本科及以上学历，计算机科学、人工智能、数据科学等相关专业。<br>2.深入了解大模型的训练和部署，具备API接口调用及FastGPT、Dify等应用框架的RAG实战经<br>3.熟悉LLaMA-Factory、Swif等训练框架，最好有分布式训练经验(如Deepspeed)<br>4.精通各类训练数据集，如IDPO、RLHF、PPO等，并熟悉SFT训练方法。<br>5.熟悉多模态数据处理，能够高效地处理和向量化文本、图片数据。<br>6.具备一定的AI模型接入经验，尤其是如何将模型与微信平台(包括企业微信、个人微信、公众号、小程序)结合。<br>7.有较强的主观学习能力和好奇心，能够快速理解并解决技术难题。<br>8.具备较好的团队协作和沟通能力，能够与不同部门进行有效合作。</p><h2 id="技能需求">技能需求:</h2><p>-技术栈：FAISS、Milvus、SQL(MySQL/PostgreSQL等）、Python、RAG<br>-经验要求:向量化模型(如BERT、CLIP等)应用、数据库设计与优化,RAG搭建;大模型训练与部署、API接口调用。<br>-接入技术:微信API、微信小程序开发、企业微信开发<br>其他：良好的沟通能力，能与跨部门团队协作具备强烈的学习兴趣和解决问题的能力</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;1.新意互动–python全栈实习生&lt;/h1&gt;
-&lt;h2 id=&quot;岗位需求&quot;&gt;岗位需求:&lt;/h2&gt;
-&lt;p&gt;1.熟悉agent搭建及后端开发，有相关项目经历&lt;/p&gt;
-&lt;p&gt;2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验&lt;/p&gt;
-&lt;p&gt;3.</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python开发5Django</title>
     <link href="https://wenblog.top/posts/68b27013.html"/>
     <id>https://wenblog.top/posts/68b27013.html</id>
@@ -262,6 +206,35 @@
 &lt;li&gt;在models文件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python开发1Redis</title>
+    <link href="https://wenblog.top/posts/68b27007.html"/>
+    <id>https://wenblog.top/posts/68b27007.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>1.Redis</h1><p><strong>Redis是一个高性能的Key-Value数据库</strong></p><ul><li>C语言编写的</li><li>实习缓存、队列系统的不同角色</li><li>中文网站（<a href="http://redis.cn">redis.cn</a>）</li></ul><h2 id="Redis特性（同其它可以-value缓存产品）">Redis特性（同其它可以-value缓存产品）</h2><ul><li>支持数据的持久化，即将内存的数据保存在磁盘上，重启时可再次加载</li><li>Redis不仅仅支持简单的kv类型的数据，还可提供list、set、zset、hash等数据结构的存储</li><li>支持数据备份，即master-slave模式的数据备份</li></ul><h2 id="Redis优势">Redis优势</h2><ul><li>性能极高</li><li>丰富的数据类型----支持二进制的Strings（字符串），Lists（列表），Hashes（哈希表），Sets（集合）及Ordered Sets（有序集合）数据类型操作</li><li>所有操作都是原子性的</li><li>丰富的特性—支持publish/subscribe（发布/订阅），通知，key过期等特性</li></ul><h2 id="Redis应用场景">Redis应用场景</h2><ul><li>用作缓存---------所有数据放在内存中（内存数据库）</li><li>特定场景替代传统数据库----比如社交类的应用</li><li>实现特定功能----session共享，购物车</li></ul><h2 id="Redis配置">Redis配置</h2><ul><li><p>查看配置信息：</p><blockquote><p>sudo vi 目录</p></blockquote></li><li><p>绑定ip</p><blockquote><p>bind 127.0.0.1 或真实ip</p></blockquote></li><li><p>端口，默认6379</p><blockquote><p>port 6379</p></blockquote></li><li><p>是否以守护进程运行（后台进程），推荐yes</p><blockquote><p>daemonize yes</p></blockquote></li><li><p>数据文件</p><blockquote><p>dbfilename dump.rdb</p></blockquote></li><li><p>数据文件存储路径</p><blockquote><p>dir /var/lib/redis</p></blockquote></li><li><p>日志文件</p><blockquote><p>logfile “/var/log/redis/redis-server.log”</p></blockquote></li><li><p>数据库默认16个</p><blockquote><p>database 16</p></blockquote></li><li><p>主从复制（双机备份）</p><blockquote><p>slaveof</p></blockquote></li></ul><h1>2.NoSQL</h1><ul><li>非关系型数据库（not only sql）</li><li>不支持sql语法</li><li>nosql存储数据都是kv形式</li><li>nosql数据库语言不通用</li><li>包括：Redis、Mongodb（<strong>蒙戈DB</strong>。“芒果DB”）存文档、Hbase hadoop（<strong>HBase哈杜普</strong>）处理海量数据、Cassandra hadoop（<strong>卡桑德拉 哈杜普</strong>）</li></ul><h2 id="NoSQL与SQL数据库区别：">NoSQL与SQL数据库区别：</h2><ul><li>sql数据库适用于关系特别复杂的数据查询场景，nosql反之；</li><li>sql对事务（要么一起成功，要么一起失败）的支持非常完善，nosql基本不支持事务</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;1.Redis&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Redis是一个高性能的Key-Value数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C语言编写的&lt;/li&gt;
+&lt;li&gt;实习缓存、队列系统的不同角色&lt;/li&gt;
+&lt;li&gt;中文网站（&lt;a href=&quot;http://redi</summary>
       
     
     
@@ -362,6 +335,33 @@
   </entry>
   
   <entry>
+    <title>Agent开发（智能体）</title>
+    <link href="https://wenblog.top/posts/68b27003.html"/>
+    <id>https://wenblog.top/posts/68b27003.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
+&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于python的一些问题</title>
     <link href="https://wenblog.top/posts/4bfb6141.html"/>
     <id>https://wenblog.top/posts/4bfb6141.html</id>
@@ -392,6 +392,30 @@
   </entry>
   
   <entry>
+    <title>bug</title>
+    <link href="https://wenblog.top/posts/358cbf14.html"/>
+    <id>https://wenblog.top/posts/358cbf14.html</id>
+    <published>2024-04-28T19:09:10.000Z</published>
+    <updated>2024-04-28T19:09:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’&quot;&gt;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’&lt;</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MEA-EFFormer</title>
     <link href="https://wenblog.top/posts/d3bdf607.html"/>
     <id>https://wenblog.top/posts/d3bdf607.html</id>
@@ -405,30 +429,6 @@
       
     <summary type="html">&lt;h1&gt;&lt;strong&gt;MEA-EFFormer：基于增强特征Transformer的多尺度有效注意力算法及其在高光谱图像分类中的应用&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.postimg.cc/0yD1hzbh/1714313204.png&quot;</summary>
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://wenblog.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="https://wenblog.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bug</title>
-    <link href="https://wenblog.top/posts/358cbf14.html"/>
-    <id>https://wenblog.top/posts/358cbf14.html</id>
-    <published>2024-04-28T19:09:10.000Z</published>
-    <updated>2024-04-28T19:09:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’&quot;&gt;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’&lt;</summary>
       
     
     
