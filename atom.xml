@@ -17,6 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Agent开发（智能体）</title>
+    <link href="https://wenblog.top/posts/68b27003.html"/>
+    <id>https://wenblog.top/posts/68b27003.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
+&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python八股文1</title>
     <link href="https://wenblog.top/posts/68b27004.html"/>
     <id>https://wenblog.top/posts/68b27004.html</id>
@@ -87,6 +114,35 @@
 &lt;p&gt;1.熟悉agent搭建及后端开发，有相关项目经历&lt;/p&gt;
 &lt;p&gt;2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验&lt;/p&gt;
 &lt;p&gt;3.</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python开发1Redis</title>
+    <link href="https://wenblog.top/posts/68b27007.html"/>
+    <id>https://wenblog.top/posts/68b27007.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>1.Redis</h1><p><strong>Redis是一个高性能的Key-Value数据库</strong></p><ul><li>C语言编写的</li><li>实习缓存、队列系统的不同角色</li><li>中文网站（<a href="http://redis.cn">redis.cn</a>）</li></ul><h2 id="Redis特性（同其它可以-value缓存产品）">Redis特性（同其它可以-value缓存产品）</h2><ul><li>支持数据的持久化，即将内存的数据保存在磁盘上，重启时可再次加载</li><li>Redis不仅仅支持简单的kv类型的数据，还可提供list、set、zset、hash等数据结构的存储</li><li>支持数据备份，即master-slave模式的数据备份</li></ul><h2 id="Redis优势">Redis优势</h2><ul><li>性能极高</li><li>丰富的数据类型----支持二进制的Strings（字符串），Lists（列表），Hashes（哈希表），Sets（集合）及Ordered Sets（有序集合）数据类型操作</li><li>所有操作都是原子性的</li><li>丰富的特性—支持publish/subscribe（发布/订阅），通知，key过期等特性</li></ul><h2 id="Redis应用场景">Redis应用场景</h2><ul><li>用作缓存---------所有数据放在内存中（内存数据库）</li><li>特定场景替代传统数据库----比如社交类的应用</li><li>实现特定功能----session共享，购物车</li></ul><h2 id="Redis配置">Redis配置</h2><ul><li><p>查看配置信息：</p><blockquote><p>sudo vi 目录</p></blockquote></li><li><p>绑定ip</p><blockquote><p>bind 127.0.0.1 或真实ip</p></blockquote></li><li><p>端口，默认6379</p><blockquote><p>port 6379</p></blockquote></li><li><p>是否以守护进程运行（后台进程），推荐yes</p><blockquote><p>daemonize yes</p></blockquote></li><li><p>数据文件</p><blockquote><p>dbfilename dump.rdb</p></blockquote></li><li><p>数据文件存储路径</p><blockquote><p>dir /var/lib/redis</p></blockquote></li><li><p>日志文件</p><blockquote><p>logfile “/var/log/redis/redis-server.log”</p></blockquote></li><li><p>数据库默认16个</p><blockquote><p>database 16</p></blockquote></li><li><p>主从复制（双机备份）</p><blockquote><p>slaveof</p></blockquote></li></ul><h1>2.NoSQL</h1><ul><li>非关系型数据库（not only sql）</li><li>不支持sql语法</li><li>nosql存储数据都是kv形式</li><li>nosql数据库语言不通用</li><li>包括：Redis、Mongodb（<strong>蒙戈DB</strong>。“芒果DB”）存文档、Hbase hadoop（<strong>HBase哈杜普</strong>）处理海量数据、Cassandra hadoop（<strong>卡桑德拉 哈杜普</strong>）</li></ul><h2 id="NoSQL与SQL数据库区别：">NoSQL与SQL数据库区别：</h2><ul><li>sql数据库适用于关系特别复杂的数据查询场景，nosql反之；</li><li>sql对事务（要么一起成功，要么一起失败）的支持非常完善，nosql基本不支持事务</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;1.Redis&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Redis是一个高性能的Key-Value数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C语言编写的&lt;/li&gt;
+&lt;li&gt;实习缓存、队列系统的不同角色&lt;/li&gt;
+&lt;li&gt;中文网站（&lt;a href=&quot;http://redi</summary>
       
     
     
@@ -218,35 +274,6 @@
   </entry>
   
   <entry>
-    <title>python开发1Redis</title>
-    <link href="https://wenblog.top/posts/68b27007.html"/>
-    <id>https://wenblog.top/posts/68b27007.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>1.Redis</h1><p><strong>Redis是一个高性能的Key-Value数据库</strong></p><ul><li>C语言编写的</li><li>实习缓存、队列系统的不同角色</li><li>中文网站（<a href="http://redis.cn">redis.cn</a>）</li></ul><h2 id="Redis特性（同其它可以-value缓存产品）">Redis特性（同其它可以-value缓存产品）</h2><ul><li>支持数据的持久化，即将内存的数据保存在磁盘上，重启时可再次加载</li><li>Redis不仅仅支持简单的kv类型的数据，还可提供list、set、zset、hash等数据结构的存储</li><li>支持数据备份，即master-slave模式的数据备份</li></ul><h2 id="Redis优势">Redis优势</h2><ul><li>性能极高</li><li>丰富的数据类型----支持二进制的Strings（字符串），Lists（列表），Hashes（哈希表），Sets（集合）及Ordered Sets（有序集合）数据类型操作</li><li>所有操作都是原子性的</li><li>丰富的特性—支持publish/subscribe（发布/订阅），通知，key过期等特性</li></ul><h2 id="Redis应用场景">Redis应用场景</h2><ul><li>用作缓存---------所有数据放在内存中（内存数据库）</li><li>特定场景替代传统数据库----比如社交类的应用</li><li>实现特定功能----session共享，购物车</li></ul><h2 id="Redis配置">Redis配置</h2><ul><li><p>查看配置信息：</p><blockquote><p>sudo vi 目录</p></blockquote></li><li><p>绑定ip</p><blockquote><p>bind 127.0.0.1 或真实ip</p></blockquote></li><li><p>端口，默认6379</p><blockquote><p>port 6379</p></blockquote></li><li><p>是否以守护进程运行（后台进程），推荐yes</p><blockquote><p>daemonize yes</p></blockquote></li><li><p>数据文件</p><blockquote><p>dbfilename dump.rdb</p></blockquote></li><li><p>数据文件存储路径</p><blockquote><p>dir /var/lib/redis</p></blockquote></li><li><p>日志文件</p><blockquote><p>logfile “/var/log/redis/redis-server.log”</p></blockquote></li><li><p>数据库默认16个</p><blockquote><p>database 16</p></blockquote></li><li><p>主从复制（双机备份）</p><blockquote><p>slaveof</p></blockquote></li></ul><h1>2.NoSQL</h1><ul><li>非关系型数据库（not only sql）</li><li>不支持sql语法</li><li>nosql存储数据都是kv形式</li><li>nosql数据库语言不通用</li><li>包括：Redis、Mongodb（<strong>蒙戈DB</strong>。“芒果DB”）存文档、Hbase hadoop（<strong>HBase哈杜普</strong>）处理海量数据、Cassandra hadoop（<strong>卡桑德拉 哈杜普</strong>）</li></ul><h2 id="NoSQL与SQL数据库区别：">NoSQL与SQL数据库区别：</h2><ul><li>sql数据库适用于关系特别复杂的数据查询场景，nosql反之；</li><li>sql对事务（要么一起成功，要么一起失败）的支持非常完善，nosql基本不支持事务</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;1.Redis&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Redis是一个高性能的Key-Value数据库&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;C语言编写的&lt;/li&gt;
-&lt;li&gt;实习缓存、队列系统的不同角色&lt;/li&gt;
-&lt;li&gt;中文网站（&lt;a href=&quot;http://redi</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python开发6Django</title>
     <link href="https://wenblog.top/posts/68b27014.html"/>
     <id>https://wenblog.top/posts/68b27014.html</id>
@@ -335,33 +362,6 @@
   </entry>
   
   <entry>
-    <title>Agent开发（智能体）</title>
-    <link href="https://wenblog.top/posts/68b27003.html"/>
-    <id>https://wenblog.top/posts/68b27003.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
-&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于python的一些问题</title>
     <link href="https://wenblog.top/posts/4bfb6141.html"/>
     <id>https://wenblog.top/posts/4bfb6141.html</id>
@@ -392,30 +392,6 @@
   </entry>
   
   <entry>
-    <title>bug</title>
-    <link href="https://wenblog.top/posts/358cbf14.html"/>
-    <id>https://wenblog.top/posts/358cbf14.html</id>
-    <published>2024-04-28T19:09:10.000Z</published>
-    <updated>2024-04-28T19:09:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’&quot;&gt;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’&lt;</summary>
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://wenblog.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="https://wenblog.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MEA-EFFormer</title>
     <link href="https://wenblog.top/posts/d3bdf607.html"/>
     <id>https://wenblog.top/posts/d3bdf607.html</id>
@@ -429,6 +405,30 @@
       
     <summary type="html">&lt;h1&gt;&lt;strong&gt;MEA-EFFormer：基于增强特征Transformer的多尺度有效注意力算法及其在高光谱图像分类中的应用&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.postimg.cc/0yD1hzbh/1714313204.png&quot;</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bug</title>
+    <link href="https://wenblog.top/posts/358cbf14.html"/>
+    <id>https://wenblog.top/posts/358cbf14.html</id>
+    <published>2024-04-28T19:09:10.000Z</published>
+    <updated>2024-04-28T19:09:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’&quot;&gt;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’&lt;</summary>
       
     
     
