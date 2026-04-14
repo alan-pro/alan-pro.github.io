@@ -17,33 +17,6 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Agent开发（智能体）</title>
-    <link href="https://wenblog.top/posts/68b27003.html"/>
-    <id>https://wenblog.top/posts/68b27003.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
-&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python八股文1</title>
     <link href="https://wenblog.top/posts/68b27004.html"/>
     <id>https://wenblog.top/posts/68b27004.html</id>
@@ -233,6 +206,33 @@
 &lt;li&gt;Web应用处理流程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;D:/pro/Pictures/PixPin_2025-04-11_15-01-41.jpg&quot; alt=&quot;PixPin_2025-04-11_15-01-41</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Agent开发（智能体）</title>
+    <link href="https://wenblog.top/posts/68b27003.html"/>
+    <id>https://wenblog.top/posts/68b27003.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
+&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
       
     
     
