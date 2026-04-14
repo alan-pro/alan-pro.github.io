@@ -17,6 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Agent开发（智能体）</title>
+    <link href="https://wenblog.top/posts/68b27003.html"/>
+    <id>https://wenblog.top/posts/68b27003.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
+&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python八股文1</title>
     <link href="https://wenblog.top/posts/68b27004.html"/>
     <id>https://wenblog.top/posts/68b27004.html</id>
@@ -218,6 +245,35 @@
   </entry>
   
   <entry>
+    <title>python开发5Django</title>
+    <link href="https://wenblog.top/posts/68b27013.html"/>
+    <id>https://wenblog.top/posts/68b27013.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>ORM(对象关系映射)</h1><h3 id="1-定义模型类">1.定义模型类</h3><ul><li>在models文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BookInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写 str方法以让admin显示书籍名称</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PeopleInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    gender = models.BooleanField()</span><br><span class="line">    <span class="comment"># 外键约束：人物属于哪本书</span></span><br><span class="line">    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure><h3 id="2-模型迁移-建表">2.模型迁移(建表)</h3><ul><li><p>生成迁移文件</p><blockquote><p>python <a href="http://manage.py">manage.py</a> makemigrations</p></blockquote></li><li><p>执行迁移</p><blockquote><p>python <a href="http://manage.py">manage.py</a> migrate</p></blockquote></li></ul><h3 id="3-连接数据库">3.连接数据库</h3><ul><li>连接sqlite3数据库,并下载连接插件</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_17-01-11.jpg" alt="PixPin_2025-04-14_17-01-11"></p><h1>站点管理</h1><ul><li><p>创建超级管理员</p><blockquote><p>python <a href="http://manage.py">manage.py</a> createsuperuser</p><p>python <a href="http://manage.py">manage.py</a> changepassword 用户名 # 重置密码</p></blockquote></li><li><p>登录站点：<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p></li></ul><h1>注册模型类</h1><ul><li>在子应用的admin文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="keyword">from</span> project.models <span class="keyword">import</span> BookInfo, PeopleInfo</span><br><span class="line"><span class="comment"># 注册模型</span></span><br><span class="line">admin.site.register(BookInfo)</span><br><span class="line">admin.site.register(PeopleInfo)</span><br><span class="line"><span class="comment"># 重新运行</span></span><br></pre></td></tr></table></figure><h3 id="添加测试用例">添加测试用例</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> bookinfo(name,pub_date,readcount,commentcount,is_delete) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;射雕英雄传&#x27;</span>,<span class="string">&#x27;1980-5-1&#x27;</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">0</span>),(<span class="string">&#x27;天龙八部&#x27;</span>,<span class="string">&#x27;1986-7-24&#x27;</span>,<span class="number">36</span>,<span class="number">40</span>,<span class="number">0</span>),(<span class="string">&#x27;笑傲江湖&#x27;</span>,<span class="string">&#x27;1995-12-24&#x27;</span>,<span class="number">20</span>,<span class="number">80</span>,<span class="number">0</span>),(<span class="string">&#x27;雪山飞狐&#x27;</span>,<span class="string">&#x27;1987-11-11&#x27;</span>,<span class="number">58</span>,<span class="number">24</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> peopleinfo(name,gender,book_id,description,is_delete) <span class="keyword">values</span> </span><br><span class="line">(<span class="string">&#x27;郭靖&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄蓉&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;打狗棍法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄药师&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;弹指神通&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;欧阳锋&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;蛤功&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;梅超风&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;九阴白骨爪&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;乔峰&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;段誉&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;六脉神剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;虚竹&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;天山六阳掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;王语嫣&#x27;</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;神仙姐姐&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;令狐冲&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;独孤九剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;任盈盈&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;弹琴&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;岳不群&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;华山剑法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;东方不败&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;葵花宝典&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;胡斐&#x27;</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="string">&#x27;胡家刀法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;苗若兰&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;黄衣&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;程灵素&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;医术&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;袁衣&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;六合拳&#x27;</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><h2 id="shell工具">shell工具</h2><ul><li>所见即所得，在shell里测试代码</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;ORM(对象关系映射)&lt;/h1&gt;
+&lt;h3 id=&quot;1-定义模型类&quot;&gt;1.定义模型类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在models文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python开发6Django</title>
     <link href="https://wenblog.top/posts/68b27014.html"/>
     <id>https://wenblog.top/posts/68b27014.html</id>
@@ -294,62 +350,6 @@
 &lt;p&gt;1.熟悉agent搭建及后端开发，有相关项目经历&lt;/p&gt;
 &lt;p&gt;2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验&lt;/p&gt;
 &lt;p&gt;3.</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Agent开发（智能体）</title>
-    <link href="https://wenblog.top/posts/68b27003.html"/>
-    <id>https://wenblog.top/posts/68b27003.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
-&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python开发5Django</title>
-    <link href="https://wenblog.top/posts/68b27013.html"/>
-    <id>https://wenblog.top/posts/68b27013.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>ORM(对象关系映射)</h1><h3 id="1-定义模型类">1.定义模型类</h3><ul><li>在models文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BookInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写 str方法以让admin显示书籍名称</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PeopleInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    gender = models.BooleanField()</span><br><span class="line">    <span class="comment"># 外键约束：人物属于哪本书</span></span><br><span class="line">    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure><h3 id="2-模型迁移-建表">2.模型迁移(建表)</h3><ul><li><p>生成迁移文件</p><blockquote><p>python <a href="http://manage.py">manage.py</a> makemigrations</p></blockquote></li><li><p>执行迁移</p><blockquote><p>python <a href="http://manage.py">manage.py</a> migrate</p></blockquote></li></ul><h3 id="3-连接数据库">3.连接数据库</h3><ul><li>连接sqlite3数据库,并下载连接插件</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_17-01-11.jpg" alt="PixPin_2025-04-14_17-01-11"></p><h1>站点管理</h1><ul><li><p>创建超级管理员</p><blockquote><p>python <a href="http://manage.py">manage.py</a> createsuperuser</p><p>python <a href="http://manage.py">manage.py</a> changepassword 用户名 # 重置密码</p></blockquote></li><li><p>登录站点：<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p></li></ul><h1>注册模型类</h1><ul><li>在子应用的admin文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="keyword">from</span> project.models <span class="keyword">import</span> BookInfo, PeopleInfo</span><br><span class="line"><span class="comment"># 注册模型</span></span><br><span class="line">admin.site.register(BookInfo)</span><br><span class="line">admin.site.register(PeopleInfo)</span><br><span class="line"><span class="comment"># 重新运行</span></span><br></pre></td></tr></table></figure><h3 id="添加测试用例">添加测试用例</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> bookinfo(name,pub_date,readcount,commentcount,is_delete) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;射雕英雄传&#x27;</span>,<span class="string">&#x27;1980-5-1&#x27;</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">0</span>),(<span class="string">&#x27;天龙八部&#x27;</span>,<span class="string">&#x27;1986-7-24&#x27;</span>,<span class="number">36</span>,<span class="number">40</span>,<span class="number">0</span>),(<span class="string">&#x27;笑傲江湖&#x27;</span>,<span class="string">&#x27;1995-12-24&#x27;</span>,<span class="number">20</span>,<span class="number">80</span>,<span class="number">0</span>),(<span class="string">&#x27;雪山飞狐&#x27;</span>,<span class="string">&#x27;1987-11-11&#x27;</span>,<span class="number">58</span>,<span class="number">24</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> peopleinfo(name,gender,book_id,description,is_delete) <span class="keyword">values</span> </span><br><span class="line">(<span class="string">&#x27;郭靖&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄蓉&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;打狗棍法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄药师&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;弹指神通&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;欧阳锋&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;蛤功&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;梅超风&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;九阴白骨爪&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;乔峰&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;段誉&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;六脉神剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;虚竹&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;天山六阳掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;王语嫣&#x27;</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;神仙姐姐&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;令狐冲&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;独孤九剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;任盈盈&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;弹琴&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;岳不群&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;华山剑法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;东方不败&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;葵花宝典&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;胡斐&#x27;</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="string">&#x27;胡家刀法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;苗若兰&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;黄衣&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;程灵素&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;医术&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;袁衣&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;六合拳&#x27;</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><h2 id="shell工具">shell工具</h2><ul><li>所见即所得，在shell里测试代码</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;ORM(对象关系映射)&lt;/h1&gt;
-&lt;h3 id=&quot;1-定义模型类&quot;&gt;1.定义模型类&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;在models文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
       
     
     
