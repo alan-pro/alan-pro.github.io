@@ -17,33 +17,6 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Agent开发（智能体）</title>
-    <link href="https://wenblog.top/posts/68b27003.html"/>
-    <id>https://wenblog.top/posts/68b27003.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
-&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python八股文1</title>
     <link href="https://wenblog.top/posts/68b27004.html"/>
     <id>https://wenblog.top/posts/68b27004.html</id>
@@ -155,6 +128,68 @@
   </entry>
   
   <entry>
+    <title>python开发2Redis</title>
+    <link href="https://wenblog.top/posts/68b27008.html"/>
+    <id>https://wenblog.top/posts/68b27008.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Redis</h1><p>Redis是一个服务端-客户端模式</p><h2 id="服务端">服务端</h2><ul><li><p>服务端命令为redis-server</p></li><li><p>help命令查看帮助文档</p><blockquote><p>redis-server --help</p></blockquote></li><li><p>其它命令</p><blockquote><p>ps aux | grep redis 查看redis服务器进程</p><p>sudo kill -9 pid 杀死redis服务器</p><p>sudo redis-server /etc/redis/redis.conf指定加载的配置文件</p></blockquote></li></ul><h2 id="客户端">客户端</h2><ul><li><p>命令为redis-cli</p></li><li><p>redis-cli --help</p></li><li><p>连接redis</p><blockquote><p>redis-cli</p></blockquote></li></ul><h2 id="数据结构">数据结构</h2><p><img src="D:/pro/Pictures/PixPin_2025-04-09_20-48-28.jpg" alt="PixPin_2025-04-09_20-48-28"></p><ul><li><p>设置与查看kv值</p><blockquote><p>set key值 value值  设置kv值</p><p>get key值   查看kv值</p><p>select 15   切换0到15数据库</p></blockquote></li><li><p>设置过期</p><blockquote><p>setex key值 seconds秒 value  例如验证码过期</p><p>ttl key值   查看过期时间</p><p>expire key seconds秒  设置过期</p></blockquote></li><li><p>其它</p><blockquote><p>key * 查看所有key值</p><p>mset key value key value 设置多个kv值</p><p>exists key 查看是否存在</p><p>type key 查看类型</p><p>del key key key 删除</p></blockquote></li></ul><h3 id="哈希设置">哈希设置</h3><ul><li><p>添加和获取</p><blockquote><p>hset 哈希表名 k v</p><p>hget 哈希表名 k</p></blockquote></li><li><p>查看</p><blockquote><p>hkeys 表名  查看所有k</p><p>hvals 表名 查看所有v</p></blockquote></li></ul><h3 id="列表设置">列表设置</h3><ul><li><p>添加和获取</p><blockquote><p>lpush key value value  添加，l指的是左面插入，r是右面插入</p><p>lrange key index  index  查看第几个到第几个的值，有序</p></blockquote></li><li><p>删除</p><blockquote><p>lrem key count value</p><p>若count=0，删除所有value；若count&gt;0，从左往右删除count个value；若&lt;0，反之。</p></blockquote></li></ul><h3 id="集合">集合</h3><ul><li><p>添加和查看</p><blockquote><p>sadd key member member 设置key和成员</p><p>smembers key 查看成员，成员重复只显示一个，且无序</p></blockquote></li><li><p>删除</p><blockquote><p>srem key member</p></blockquote></li></ul><h3 id="有序集合">有序集合</h3><ul><li><p>添加和查看</p><blockquote><p>zadd key score1 member1 score2 member2</p><p>zrange key start stop 第几个到第几个</p></blockquote></li><li><p>删除指定元素</p><blockquote><p>zrem key member1 member2</p></blockquote></li></ul><h1>Redis安装</h1><blockquote><p>pip install redis</p></blockquote><ul><li><p>调用redis</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">form redis <span class="keyword">import</span> Redis</span><br><span class="line"><span class="comment"># 创建redis-cli类实例</span></span><br><span class="line">redis_cli=Redis(host=<span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">            port= <span class="number">6379</span>,</span><br><span class="line">            db=<span class="number">0</span>)</span><br><span class="line">redis_cli.<span class="built_in">set</span>(<span class="string">&quot;key&quot;</span>, <span class="string">&quot;value&quot;</span>)</span><br><span class="line">name=redis_cli.get(<span class="string">&quot;key&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(name) <span class="comment"># value</span></span><br><span class="line">redis_cli.delete(<span class="string">&quot;key&quot;</span>)</span><br></pre></td></tr></table></figure></li></ul><p>文档：<a href="http://django-redis-chs.readthedocs.io/zh">django-redis-chs.readthedocs.io/zh</a> CN/latest/</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;Redis&lt;/h1&gt;
+&lt;p&gt;Redis是一个服务端-客户端模式&lt;/p&gt;
+&lt;h2 id=&quot;服务端&quot;&gt;服务端&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;服务端命令为redis-server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;help命令查看帮助文档&lt;/p&gt;
+&lt;blockquote</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python开发3Git</title>
+    <link href="https://wenblog.top/posts/68b27009.html"/>
+    <id>https://wenblog.top/posts/68b27009.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Git</h1><ul><li>源代码管理软件</li><li>版本控制</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-10_16-17-57.jpg" alt="PixPin_2025-04-10_16-17-57"></p><ul><li><p>创建目录和文件</p><blockquote><p>mkdir 文件夹名</p><p>touch 文件名</p></blockquote></li><li><p>git命令</p><blockquote><p>git init 初始化</p><p>git config <a href="http://user.name">user.name</a> 名字  告知仓库谁管理</p><p>git config user.email 邮箱</p><p>git add 文件夹或文件 提交的暂存区 / git add .</p><p>git commit -m “备注”   提交到仓库区</p><p>git push</p><p>git reset --hard HEAD^ 回退一个版本,一个^代表一个版本</p><p>git reflog 版本记录</p><p>git reset --hard 版本号 回退到某个版本</p><p>git reset HEAD <a href="http://login.py">login.py</a> 由暂存区恢复到工作区</p></blockquote></li></ul><h1>实例</h1><ul><li>复制仓库地址</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_09-32-02.jpg" alt="PixPin_2025-04-14_09-32-02"></p><ul><li><p>空文件夹内，右键选择git bash here</p></li><li><p>克隆远程仓库</p><blockquote><p>git clone <a href="https://github.com/alan-pro/python_code.git">https://github.com/alan-pro/python_code.git</a></p></blockquote></li></ul><h1>问题</h1><blockquote><p>$ git add .<br>warning: in the working copy of ‘.idea/inspectionProfiles/Project_Default.xml’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘.idea/inspectionProfiles/profiles_settings.xml’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/Pipfile’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/dist/size_gui/_internal/numpy.libs/.load-order-numpy-2.0.2’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/dist/size_gui/_internal/scipy.libs/.load-order-scipy-1.13.1’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/ui/size_gui.ui’, LF will be replaced by CRLF the next time Git touches it</p></blockquote><ul><li><p>原因</p><p>**LF（Line Feed）<strong>和</strong>CRLF（Carriage Return + Line Feed）**是两种不同的行结束符表示方式。</p><ul><li><strong>LF</strong> 是 Unix/Linux 和 macOS 系统中常用的行结束符。</li><li><strong>CRLF</strong> 是 Windows 系统中常用的行结束符。</li></ul></li><li><p>解决方法</p><blockquote><p>git config core.autocrlf true #配置仅在当前仓库</p><p>git config --global core.autocrlf true  #适应于所有仓库</p></blockquote></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;Git&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;源代码管理软件&lt;/li&gt;
+&lt;li&gt;版本控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;D:/pro/Pictures/PixPin_2025-04-10_16-17-57.jpg&quot; alt=&quot;PixPin_2025-04-10_1</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python开发4Django</title>
     <link href="https://wenblog.top/posts/68b27010.html"/>
     <id>https://wenblog.top/posts/68b27010.html</id>
@@ -171,35 +206,6 @@
 &lt;li&gt;Web应用处理流程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;D:/pro/Pictures/PixPin_2025-04-11_15-01-41.jpg&quot; alt=&quot;PixPin_2025-04-11_15-01-41</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python开发5Django</title>
-    <link href="https://wenblog.top/posts/68b27013.html"/>
-    <id>https://wenblog.top/posts/68b27013.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>ORM(对象关系映射)</h1><h3 id="1-定义模型类">1.定义模型类</h3><ul><li>在models文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BookInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写 str方法以让admin显示书籍名称</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PeopleInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    gender = models.BooleanField()</span><br><span class="line">    <span class="comment"># 外键约束：人物属于哪本书</span></span><br><span class="line">    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure><h3 id="2-模型迁移-建表">2.模型迁移(建表)</h3><ul><li><p>生成迁移文件</p><blockquote><p>python <a href="http://manage.py">manage.py</a> makemigrations</p></blockquote></li><li><p>执行迁移</p><blockquote><p>python <a href="http://manage.py">manage.py</a> migrate</p></blockquote></li></ul><h3 id="3-连接数据库">3.连接数据库</h3><ul><li>连接sqlite3数据库,并下载连接插件</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_17-01-11.jpg" alt="PixPin_2025-04-14_17-01-11"></p><h1>站点管理</h1><ul><li><p>创建超级管理员</p><blockquote><p>python <a href="http://manage.py">manage.py</a> createsuperuser</p><p>python <a href="http://manage.py">manage.py</a> changepassword 用户名 # 重置密码</p></blockquote></li><li><p>登录站点：<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p></li></ul><h1>注册模型类</h1><ul><li>在子应用的admin文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="keyword">from</span> project.models <span class="keyword">import</span> BookInfo, PeopleInfo</span><br><span class="line"><span class="comment"># 注册模型</span></span><br><span class="line">admin.site.register(BookInfo)</span><br><span class="line">admin.site.register(PeopleInfo)</span><br><span class="line"><span class="comment"># 重新运行</span></span><br></pre></td></tr></table></figure><h3 id="添加测试用例">添加测试用例</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> bookinfo(name,pub_date,readcount,commentcount,is_delete) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;射雕英雄传&#x27;</span>,<span class="string">&#x27;1980-5-1&#x27;</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">0</span>),(<span class="string">&#x27;天龙八部&#x27;</span>,<span class="string">&#x27;1986-7-24&#x27;</span>,<span class="number">36</span>,<span class="number">40</span>,<span class="number">0</span>),(<span class="string">&#x27;笑傲江湖&#x27;</span>,<span class="string">&#x27;1995-12-24&#x27;</span>,<span class="number">20</span>,<span class="number">80</span>,<span class="number">0</span>),(<span class="string">&#x27;雪山飞狐&#x27;</span>,<span class="string">&#x27;1987-11-11&#x27;</span>,<span class="number">58</span>,<span class="number">24</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> peopleinfo(name,gender,book_id,description,is_delete) <span class="keyword">values</span> </span><br><span class="line">(<span class="string">&#x27;郭靖&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄蓉&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;打狗棍法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄药师&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;弹指神通&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;欧阳锋&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;蛤功&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;梅超风&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;九阴白骨爪&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;乔峰&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;段誉&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;六脉神剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;虚竹&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;天山六阳掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;王语嫣&#x27;</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;神仙姐姐&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;令狐冲&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;独孤九剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;任盈盈&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;弹琴&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;岳不群&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;华山剑法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;东方不败&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;葵花宝典&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;胡斐&#x27;</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="string">&#x27;胡家刀法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;苗若兰&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;黄衣&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;程灵素&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;医术&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;袁衣&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;六合拳&#x27;</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><h2 id="shell工具">shell工具</h2><ul><li>所见即所得，在shell里测试代码</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;ORM(对象关系映射)&lt;/h1&gt;
-&lt;h3 id=&quot;1-定义模型类&quot;&gt;1.定义模型类&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;在models文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
       
     
     
@@ -272,68 +278,6 @@
   </entry>
   
   <entry>
-    <title>python开发2Redis</title>
-    <link href="https://wenblog.top/posts/68b27008.html"/>
-    <id>https://wenblog.top/posts/68b27008.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>Redis</h1><p>Redis是一个服务端-客户端模式</p><h2 id="服务端">服务端</h2><ul><li><p>服务端命令为redis-server</p></li><li><p>help命令查看帮助文档</p><blockquote><p>redis-server --help</p></blockquote></li><li><p>其它命令</p><blockquote><p>ps aux | grep redis 查看redis服务器进程</p><p>sudo kill -9 pid 杀死redis服务器</p><p>sudo redis-server /etc/redis/redis.conf指定加载的配置文件</p></blockquote></li></ul><h2 id="客户端">客户端</h2><ul><li><p>命令为redis-cli</p></li><li><p>redis-cli --help</p></li><li><p>连接redis</p><blockquote><p>redis-cli</p></blockquote></li></ul><h2 id="数据结构">数据结构</h2><p><img src="D:/pro/Pictures/PixPin_2025-04-09_20-48-28.jpg" alt="PixPin_2025-04-09_20-48-28"></p><ul><li><p>设置与查看kv值</p><blockquote><p>set key值 value值  设置kv值</p><p>get key值   查看kv值</p><p>select 15   切换0到15数据库</p></blockquote></li><li><p>设置过期</p><blockquote><p>setex key值 seconds秒 value  例如验证码过期</p><p>ttl key值   查看过期时间</p><p>expire key seconds秒  设置过期</p></blockquote></li><li><p>其它</p><blockquote><p>key * 查看所有key值</p><p>mset key value key value 设置多个kv值</p><p>exists key 查看是否存在</p><p>type key 查看类型</p><p>del key key key 删除</p></blockquote></li></ul><h3 id="哈希设置">哈希设置</h3><ul><li><p>添加和获取</p><blockquote><p>hset 哈希表名 k v</p><p>hget 哈希表名 k</p></blockquote></li><li><p>查看</p><blockquote><p>hkeys 表名  查看所有k</p><p>hvals 表名 查看所有v</p></blockquote></li></ul><h3 id="列表设置">列表设置</h3><ul><li><p>添加和获取</p><blockquote><p>lpush key value value  添加，l指的是左面插入，r是右面插入</p><p>lrange key index  index  查看第几个到第几个的值，有序</p></blockquote></li><li><p>删除</p><blockquote><p>lrem key count value</p><p>若count=0，删除所有value；若count&gt;0，从左往右删除count个value；若&lt;0，反之。</p></blockquote></li></ul><h3 id="集合">集合</h3><ul><li><p>添加和查看</p><blockquote><p>sadd key member member 设置key和成员</p><p>smembers key 查看成员，成员重复只显示一个，且无序</p></blockquote></li><li><p>删除</p><blockquote><p>srem key member</p></blockquote></li></ul><h3 id="有序集合">有序集合</h3><ul><li><p>添加和查看</p><blockquote><p>zadd key score1 member1 score2 member2</p><p>zrange key start stop 第几个到第几个</p></blockquote></li><li><p>删除指定元素</p><blockquote><p>zrem key member1 member2</p></blockquote></li></ul><h1>Redis安装</h1><blockquote><p>pip install redis</p></blockquote><ul><li><p>调用redis</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">form redis <span class="keyword">import</span> Redis</span><br><span class="line"><span class="comment"># 创建redis-cli类实例</span></span><br><span class="line">redis_cli=Redis(host=<span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">            port= <span class="number">6379</span>,</span><br><span class="line">            db=<span class="number">0</span>)</span><br><span class="line">redis_cli.<span class="built_in">set</span>(<span class="string">&quot;key&quot;</span>, <span class="string">&quot;value&quot;</span>)</span><br><span class="line">name=redis_cli.get(<span class="string">&quot;key&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(name) <span class="comment"># value</span></span><br><span class="line">redis_cli.delete(<span class="string">&quot;key&quot;</span>)</span><br></pre></td></tr></table></figure></li></ul><p>文档：<a href="http://django-redis-chs.readthedocs.io/zh">django-redis-chs.readthedocs.io/zh</a> CN/latest/</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;Redis&lt;/h1&gt;
-&lt;p&gt;Redis是一个服务端-客户端模式&lt;/p&gt;
-&lt;h2 id=&quot;服务端&quot;&gt;服务端&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;服务端命令为redis-server&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;help命令查看帮助文档&lt;/p&gt;
-&lt;blockquote</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python开发3Git</title>
-    <link href="https://wenblog.top/posts/68b27009.html"/>
-    <id>https://wenblog.top/posts/68b27009.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>Git</h1><ul><li>源代码管理软件</li><li>版本控制</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-10_16-17-57.jpg" alt="PixPin_2025-04-10_16-17-57"></p><ul><li><p>创建目录和文件</p><blockquote><p>mkdir 文件夹名</p><p>touch 文件名</p></blockquote></li><li><p>git命令</p><blockquote><p>git init 初始化</p><p>git config <a href="http://user.name">user.name</a> 名字  告知仓库谁管理</p><p>git config user.email 邮箱</p><p>git add 文件夹或文件 提交的暂存区 / git add .</p><p>git commit -m “备注”   提交到仓库区</p><p>git push</p><p>git reset --hard HEAD^ 回退一个版本,一个^代表一个版本</p><p>git reflog 版本记录</p><p>git reset --hard 版本号 回退到某个版本</p><p>git reset HEAD <a href="http://login.py">login.py</a> 由暂存区恢复到工作区</p></blockquote></li></ul><h1>实例</h1><ul><li>复制仓库地址</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_09-32-02.jpg" alt="PixPin_2025-04-14_09-32-02"></p><ul><li><p>空文件夹内，右键选择git bash here</p></li><li><p>克隆远程仓库</p><blockquote><p>git clone <a href="https://github.com/alan-pro/python_code.git">https://github.com/alan-pro/python_code.git</a></p></blockquote></li></ul><h1>问题</h1><blockquote><p>$ git add .<br>warning: in the working copy of ‘.idea/inspectionProfiles/Project_Default.xml’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘.idea/inspectionProfiles/profiles_settings.xml’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/Pipfile’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/dist/size_gui/_internal/numpy.libs/.load-order-numpy-2.0.2’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/dist/size_gui/_internal/scipy.libs/.load-order-scipy-1.13.1’, LF will be replaced by CRLF the next time Git touches it<br>warning: in the working copy of ‘cv2_size/ui/size_gui.ui’, LF will be replaced by CRLF the next time Git touches it</p></blockquote><ul><li><p>原因</p><p>**LF（Line Feed）<strong>和</strong>CRLF（Carriage Return + Line Feed）**是两种不同的行结束符表示方式。</p><ul><li><strong>LF</strong> 是 Unix/Linux 和 macOS 系统中常用的行结束符。</li><li><strong>CRLF</strong> 是 Windows 系统中常用的行结束符。</li></ul></li><li><p>解决方法</p><blockquote><p>git config core.autocrlf true #配置仅在当前仓库</p><p>git config --global core.autocrlf true  #适应于所有仓库</p></blockquote></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;Git&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;源代码管理软件&lt;/li&gt;
-&lt;li&gt;版本控制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;D:/pro/Pictures/PixPin_2025-04-10_16-17-57.jpg&quot; alt=&quot;PixPin_2025-04-10_1</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>岗位需求</title>
     <link href="https://wenblog.top/posts/68b27001.html"/>
     <id>https://wenblog.top/posts/68b27001.html</id>
@@ -350,6 +294,62 @@
 &lt;p&gt;1.熟悉agent搭建及后端开发，有相关项目经历&lt;/p&gt;
 &lt;p&gt;2.熟悉coze，dify，langchain中的一种或多种，有prompt工程经验&lt;/p&gt;
 &lt;p&gt;3.</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Agent开发（智能体）</title>
+    <link href="https://wenblog.top/posts/68b27003.html"/>
+    <id>https://wenblog.top/posts/68b27003.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基础知识">基础知识</h2><ul><li>Ollama（欧拉玛）：主要用于消费者，个人开发者</li><li>VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Docker</li></ul><p>开发软件：</p><p>小用户：Dify（底飞）</p><p>大用户：LangChain(兰彻因)</p><p>面向开发者，要求灵活性，高并发性，分布式，性能，可定制化</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;基础知识&quot;&gt;基础知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ollama（欧拉玛）：主要用于消费者，个人开发者&lt;/li&gt;
+&lt;li&gt;VLLM：企业在用，大规模在线推理服务，高并发处理，模型支持主流的Hugging Face模型，使用python包、openAI兼容API、Do</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python开发5Django</title>
+    <link href="https://wenblog.top/posts/68b27013.html"/>
+    <id>https://wenblog.top/posts/68b27013.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>ORM(对象关系映射)</h1><h3 id="1-定义模型类">1.定义模型类</h3><ul><li>在models文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BookInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写 str方法以让admin显示书籍名称</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PeopleInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    gender = models.BooleanField()</span><br><span class="line">    <span class="comment"># 外键约束：人物属于哪本书</span></span><br><span class="line">    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure><h3 id="2-模型迁移-建表">2.模型迁移(建表)</h3><ul><li><p>生成迁移文件</p><blockquote><p>python <a href="http://manage.py">manage.py</a> makemigrations</p></blockquote></li><li><p>执行迁移</p><blockquote><p>python <a href="http://manage.py">manage.py</a> migrate</p></blockquote></li></ul><h3 id="3-连接数据库">3.连接数据库</h3><ul><li>连接sqlite3数据库,并下载连接插件</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_17-01-11.jpg" alt="PixPin_2025-04-14_17-01-11"></p><h1>站点管理</h1><ul><li><p>创建超级管理员</p><blockquote><p>python <a href="http://manage.py">manage.py</a> createsuperuser</p><p>python <a href="http://manage.py">manage.py</a> changepassword 用户名 # 重置密码</p></blockquote></li><li><p>登录站点：<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p></li></ul><h1>注册模型类</h1><ul><li>在子应用的admin文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="keyword">from</span> project.models <span class="keyword">import</span> BookInfo, PeopleInfo</span><br><span class="line"><span class="comment"># 注册模型</span></span><br><span class="line">admin.site.register(BookInfo)</span><br><span class="line">admin.site.register(PeopleInfo)</span><br><span class="line"><span class="comment"># 重新运行</span></span><br></pre></td></tr></table></figure><h3 id="添加测试用例">添加测试用例</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> bookinfo(name,pub_date,readcount,commentcount,is_delete) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;射雕英雄传&#x27;</span>,<span class="string">&#x27;1980-5-1&#x27;</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">0</span>),(<span class="string">&#x27;天龙八部&#x27;</span>,<span class="string">&#x27;1986-7-24&#x27;</span>,<span class="number">36</span>,<span class="number">40</span>,<span class="number">0</span>),(<span class="string">&#x27;笑傲江湖&#x27;</span>,<span class="string">&#x27;1995-12-24&#x27;</span>,<span class="number">20</span>,<span class="number">80</span>,<span class="number">0</span>),(<span class="string">&#x27;雪山飞狐&#x27;</span>,<span class="string">&#x27;1987-11-11&#x27;</span>,<span class="number">58</span>,<span class="number">24</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> peopleinfo(name,gender,book_id,description,is_delete) <span class="keyword">values</span> </span><br><span class="line">(<span class="string">&#x27;郭靖&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄蓉&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;打狗棍法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄药师&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;弹指神通&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;欧阳锋&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;蛤功&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;梅超风&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;九阴白骨爪&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;乔峰&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;段誉&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;六脉神剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;虚竹&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;天山六阳掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;王语嫣&#x27;</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;神仙姐姐&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;令狐冲&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;独孤九剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;任盈盈&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;弹琴&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;岳不群&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;华山剑法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;东方不败&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;葵花宝典&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;胡斐&#x27;</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="string">&#x27;胡家刀法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;苗若兰&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;黄衣&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;程灵素&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;医术&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;袁衣&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;六合拳&#x27;</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><h2 id="shell工具">shell工具</h2><ul><li>所见即所得，在shell里测试代码</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;ORM(对象关系映射)&lt;/h1&gt;
+&lt;h3 id=&quot;1-定义模型类&quot;&gt;1.定义模型类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在models文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
       
     
     
