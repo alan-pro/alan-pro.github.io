@@ -98,35 +98,6 @@
   </entry>
   
   <entry>
-    <title>python开发1Redis</title>
-    <link href="https://wenblog.top/posts/68b27007.html"/>
-    <id>https://wenblog.top/posts/68b27007.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>1.Redis</h1><p><strong>Redis是一个高性能的Key-Value数据库</strong></p><ul><li>C语言编写的</li><li>实习缓存、队列系统的不同角色</li><li>中文网站（<a href="http://redis.cn">redis.cn</a>）</li></ul><h2 id="Redis特性（同其它可以-value缓存产品）">Redis特性（同其它可以-value缓存产品）</h2><ul><li>支持数据的持久化，即将内存的数据保存在磁盘上，重启时可再次加载</li><li>Redis不仅仅支持简单的kv类型的数据，还可提供list、set、zset、hash等数据结构的存储</li><li>支持数据备份，即master-slave模式的数据备份</li></ul><h2 id="Redis优势">Redis优势</h2><ul><li>性能极高</li><li>丰富的数据类型----支持二进制的Strings（字符串），Lists（列表），Hashes（哈希表），Sets（集合）及Ordered Sets（有序集合）数据类型操作</li><li>所有操作都是原子性的</li><li>丰富的特性—支持publish/subscribe（发布/订阅），通知，key过期等特性</li></ul><h2 id="Redis应用场景">Redis应用场景</h2><ul><li>用作缓存---------所有数据放在内存中（内存数据库）</li><li>特定场景替代传统数据库----比如社交类的应用</li><li>实现特定功能----session共享，购物车</li></ul><h2 id="Redis配置">Redis配置</h2><ul><li><p>查看配置信息：</p><blockquote><p>sudo vi 目录</p></blockquote></li><li><p>绑定ip</p><blockquote><p>bind 127.0.0.1 或真实ip</p></blockquote></li><li><p>端口，默认6379</p><blockquote><p>port 6379</p></blockquote></li><li><p>是否以守护进程运行（后台进程），推荐yes</p><blockquote><p>daemonize yes</p></blockquote></li><li><p>数据文件</p><blockquote><p>dbfilename dump.rdb</p></blockquote></li><li><p>数据文件存储路径</p><blockquote><p>dir /var/lib/redis</p></blockquote></li><li><p>日志文件</p><blockquote><p>logfile “/var/log/redis/redis-server.log”</p></blockquote></li><li><p>数据库默认16个</p><blockquote><p>database 16</p></blockquote></li><li><p>主从复制（双机备份）</p><blockquote><p>slaveof</p></blockquote></li></ul><h1>2.NoSQL</h1><ul><li>非关系型数据库（not only sql）</li><li>不支持sql语法</li><li>nosql存储数据都是kv形式</li><li>nosql数据库语言不通用</li><li>包括：Redis、Mongodb（<strong>蒙戈DB</strong>。“芒果DB”）存文档、Hbase hadoop（<strong>HBase哈杜普</strong>）处理海量数据、Cassandra hadoop（<strong>卡桑德拉 哈杜普</strong>）</li></ul><h2 id="NoSQL与SQL数据库区别：">NoSQL与SQL数据库区别：</h2><ul><li>sql数据库适用于关系特别复杂的数据查询场景，nosql反之；</li><li>sql对事务（要么一起成功，要么一起失败）的支持非常完善，nosql基本不支持事务</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;1.Redis&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Redis是一个高性能的Key-Value数据库&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;C语言编写的&lt;/li&gt;
-&lt;li&gt;实习缓存、队列系统的不同角色&lt;/li&gt;
-&lt;li&gt;中文网站（&lt;a href=&quot;http://redi</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python八股文3</title>
     <link href="https://wenblog.top/posts/68b27006.html"/>
     <id>https://wenblog.top/posts/68b27006.html</id>
@@ -273,23 +244,26 @@
   </entry>
   
   <entry>
-    <title>python开发5Django</title>
-    <link href="https://wenblog.top/posts/68b27013.html"/>
-    <id>https://wenblog.top/posts/68b27013.html</id>
+    <title>python开发7Django</title>
+    <link href="https://wenblog.top/posts/bde0d894.html"/>
+    <id>https://wenblog.top/posts/bde0d894.html</id>
     <published>2025-03-25T20:01:16.000Z</published>
     <updated>2025-03-25T20:01:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h1>ORM(对象关系映射)</h1><h3 id="1-定义模型类">1.定义模型类</h3><ul><li>在models文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BookInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写 str方法以让admin显示书籍名称</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PeopleInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    gender = models.BooleanField()</span><br><span class="line">    <span class="comment"># 外键约束：人物属于哪本书</span></span><br><span class="line">    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure><h3 id="2-模型迁移-建表">2.模型迁移(建表)</h3><ul><li><p>生成迁移文件</p><blockquote><p>python <a href="http://manage.py">manage.py</a> makemigrations</p></blockquote></li><li><p>执行迁移</p><blockquote><p>python <a href="http://manage.py">manage.py</a> migrate</p></blockquote></li></ul><h3 id="3-连接数据库">3.连接数据库</h3><ul><li>连接sqlite3数据库,并下载连接插件</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_17-01-11.jpg" alt="PixPin_2025-04-14_17-01-11"></p><h1>站点管理</h1><ul><li><p>创建超级管理员</p><blockquote><p>python <a href="http://manage.py">manage.py</a> createsuperuser</p><p>python <a href="http://manage.py">manage.py</a> changepassword 用户名 # 重置密码</p></blockquote></li><li><p>登录站点：<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p></li></ul><h1>注册模型类</h1><ul><li>在子应用的admin文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="keyword">from</span> project.models <span class="keyword">import</span> BookInfo, PeopleInfo</span><br><span class="line"><span class="comment"># 注册模型</span></span><br><span class="line">admin.site.register(BookInfo)</span><br><span class="line">admin.site.register(PeopleInfo)</span><br><span class="line"><span class="comment"># 重新运行</span></span><br></pre></td></tr></table></figure><h3 id="添加测试用例">添加测试用例</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> bookinfo(name,pub_date,readcount,commentcount,is_delete) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;射雕英雄传&#x27;</span>,<span class="string">&#x27;1980-5-1&#x27;</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">0</span>),(<span class="string">&#x27;天龙八部&#x27;</span>,<span class="string">&#x27;1986-7-24&#x27;</span>,<span class="number">36</span>,<span class="number">40</span>,<span class="number">0</span>),(<span class="string">&#x27;笑傲江湖&#x27;</span>,<span class="string">&#x27;1995-12-24&#x27;</span>,<span class="number">20</span>,<span class="number">80</span>,<span class="number">0</span>),(<span class="string">&#x27;雪山飞狐&#x27;</span>,<span class="string">&#x27;1987-11-11&#x27;</span>,<span class="number">58</span>,<span class="number">24</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> peopleinfo(name,gender,book_id,description,is_delete) <span class="keyword">values</span> </span><br><span class="line">(<span class="string">&#x27;郭靖&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄蓉&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;打狗棍法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄药师&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;弹指神通&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;欧阳锋&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;蛤功&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;梅超风&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;九阴白骨爪&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;乔峰&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;段誉&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;六脉神剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;虚竹&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;天山六阳掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;王语嫣&#x27;</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;神仙姐姐&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;令狐冲&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;独孤九剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;任盈盈&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;弹琴&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;岳不群&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;华山剑法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;东方不败&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;葵花宝典&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;胡斐&#x27;</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="string">&#x27;胡家刀法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;苗若兰&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;黄衣&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;程灵素&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;医术&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;袁衣&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;六合拳&#x27;</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><h2 id="shell工具">shell工具</h2><ul><li>所见即所得，在shell里测试代码</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1>Session</h1><ul><li>Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储</li><li>将session放入redis，放入内存</li></ul><h1>面向对象</h1><ul><li><p>三大特性</p><p>封装：把属性和方法捆绑在一起，对外隐藏实现细节（类（Class）方法来封装属性和方法）</p><p>继承：允许一个子类获取父类的属性和方法，同时可以扩展和修改它们（子类重写方法，多继承（class view(a, b)））</p><p>多态：同一操作作用于不同的类的实例，会有不同的执行结果（使用相同方法调用不同类的实例，结果不同）</p></li></ul><h1>路由匹配类视图逻辑</h1><p>客户端发出请求，到服务器的总路由，再分配到子路由上，get（）和post（）方法发出响应到客户端</p><h1>多继承</h1><ul><li><p>一个类可以同时继承多个父类，遵循MEO（方法解析顺序）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可用(类名.___mro__) 或 类名.mro()</span><br></pre></td></tr></table></figure></li><li><p>MRO顺序</p><p><img src="C:/Users/pro/AppData/Roaming/Typora/typora-user-images/image-20250617194842568.png" alt="image-20250617194842568"></p></li></ul><h1>中间件</h1><p>在每次请求和响应之间执行的方法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__init__():初始化中间件时，自动调用一次</span><br><span class="line"></span><br><span class="line">process_request():请求前</span><br><span class="line"></span><br><span class="line">process_response():响应前</span><br></pre></td></tr></table></figure><h1>后端服务的项目架构</h1><p>数据存储服务：mysql</p><p>缓存服务：Redis</p><p>异步服务：Celery</p><p>消息队列：RabbitMQ、Redis、Kafka</p><p>文件存储服务：FastDFS</p><p>全文检索：Elasticsearch</p><p>部署：Nginx(负载均衡)+uwsgi</p><p>定时任务：Crontab</p><h1>同源</h1><p>需要协议，域名，端口号都相同</p><h1>CORS</h1><p>因为前端与后端不同源，使用cors实现跨域，设置白名单，前端可以获取后端的数据</p><h1>短信发送</h1><p>容联云网站，下载python版本的demo</p><p>短信验证码业务流程：</p><p>前端发送一个axios请求，包括手机号，验证码，图形验证码的UUID</p><p>后端接收请求参数，包括手机号，验证码，图形验证码的UUID</p><p>业务逻辑：验证参数，验证图片验证码，生成短信验证码，保存短信验证码，发送短信验证码</p><p>响应：返回响应{‘code’:0, ‘errmsg’:‘ok’}</p><h3 id="管道技术">管道技术</h3><p>通过一个队列，一次同时包含多个请求，降低服务器频繁调用radis，提高执行效率</p><h3 id="异步Celery">异步Celery</h3><ul><li>生产者-消费者模式，使用消息队列（中间人：broker）分割（解耦）协调生产者和消费者</li><li>消息队列不执行任务，存储和转发任务</li><li>Celery可以实现存储转发任务，也可以实现执行任务</li></ul><h3 id="记住密码">记住密码</h3><p>是设置session过期时间，不是浏览器的记住账号和密码</p><h3 id="itsdangerous数据加密">itsdangerous数据加密</h3><p>itsdangerous对openid进行加密和解密。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1&gt;ORM(对象关系映射)&lt;/h1&gt;
-&lt;h3 id=&quot;1-定义模型类&quot;&gt;1.定义模型类&lt;/h3&gt;
+    <summary type="html">&lt;h1&gt;Session&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;在models文件&lt;/li&gt;
+&lt;li&gt;Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储&lt;/li&gt;
+&lt;li&gt;将session放入redis，放入内存&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
+&lt;h1&gt;面向对象&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;三大特性&lt;/</summary>
       
     
     
@@ -330,26 +304,52 @@
   </entry>
   
   <entry>
-    <title>python开发7Django</title>
-    <link href="https://wenblog.top/posts/bde0d894.html"/>
-    <id>https://wenblog.top/posts/bde0d894.html</id>
+    <title>python开发5Django</title>
+    <link href="https://wenblog.top/posts/68b27013.html"/>
+    <id>https://wenblog.top/posts/68b27013.html</id>
     <published>2025-03-25T20:01:16.000Z</published>
     <updated>2025-03-25T20:01:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h1>Session</h1><ul><li>Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储</li><li>将session放入redis，放入内存</li></ul><h1>面向对象</h1><ul><li><p>三大特性</p><p>封装：把属性和方法捆绑在一起，对外隐藏实现细节（类（Class）方法来封装属性和方法）</p><p>继承：允许一个子类获取父类的属性和方法，同时可以扩展和修改它们（子类重写方法，多继承（class view(a, b)））</p><p>多态：同一操作作用于不同的类的实例，会有不同的执行结果（使用相同方法调用不同类的实例，结果不同）</p></li></ul><h1>路由匹配类视图逻辑</h1><p>客户端发出请求，到服务器的总路由，再分配到子路由上，get（）和post（）方法发出响应到客户端</p><h1>多继承</h1><ul><li><p>一个类可以同时继承多个父类，遵循MEO（方法解析顺序）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可用(类名.___mro__) 或 类名.mro()</span><br></pre></td></tr></table></figure></li><li><p>MRO顺序</p><p><img src="C:/Users/pro/AppData/Roaming/Typora/typora-user-images/image-20250617194842568.png" alt="image-20250617194842568"></p></li></ul><h1>中间件</h1><p>在每次请求和响应之间执行的方法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__init__():初始化中间件时，自动调用一次</span><br><span class="line"></span><br><span class="line">process_request():请求前</span><br><span class="line"></span><br><span class="line">process_response():响应前</span><br></pre></td></tr></table></figure><h1>后端服务的项目架构</h1><p>数据存储服务：mysql</p><p>缓存服务：Redis</p><p>异步服务：Celery</p><p>消息队列：RabbitMQ、Redis、Kafka</p><p>文件存储服务：FastDFS</p><p>全文检索：Elasticsearch</p><p>部署：Nginx(负载均衡)+uwsgi</p><p>定时任务：Crontab</p><h1>同源</h1><p>需要协议，域名，端口号都相同</p><h1>CORS</h1><p>因为前端与后端不同源，使用cors实现跨域，设置白名单，前端可以获取后端的数据</p><h1>短信发送</h1><p>容联云网站，下载python版本的demo</p><p>短信验证码业务流程：</p><p>前端发送一个axios请求，包括手机号，验证码，图形验证码的UUID</p><p>后端接收请求参数，包括手机号，验证码，图形验证码的UUID</p><p>业务逻辑：验证参数，验证图片验证码，生成短信验证码，保存短信验证码，发送短信验证码</p><p>响应：返回响应{‘code’:0, ‘errmsg’:‘ok’}</p><h3 id="管道技术">管道技术</h3><p>通过一个队列，一次同时包含多个请求，降低服务器频繁调用radis，提高执行效率</p><h3 id="异步Celery">异步Celery</h3><ul><li>生产者-消费者模式，使用消息队列（中间人：broker）分割（解耦）协调生产者和消费者</li><li>消息队列不执行任务，存储和转发任务</li><li>Celery可以实现存储转发任务，也可以实现执行任务</li></ul><h3 id="记住密码">记住密码</h3><p>是设置session过期时间，不是浏览器的记住账号和密码</p><h3 id="itsdangerous数据加密">itsdangerous数据加密</h3><p>itsdangerous对openid进行加密和解密。</p>]]></content>
+    <content type="html"><![CDATA[<h1>ORM(对象关系映射)</h1><h3 id="1-定义模型类">1.定义模型类</h3><ul><li>在models文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BookInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写 str方法以让admin显示书籍名称</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PeopleInfo</span>(models.Model):</span><br><span class="line">    name = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    gender = models.BooleanField()</span><br><span class="line">    <span class="comment"># 外键约束：人物属于哪本书</span></span><br><span class="line">    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)</span><br></pre></td></tr></table></figure><h3 id="2-模型迁移-建表">2.模型迁移(建表)</h3><ul><li><p>生成迁移文件</p><blockquote><p>python <a href="http://manage.py">manage.py</a> makemigrations</p></blockquote></li><li><p>执行迁移</p><blockquote><p>python <a href="http://manage.py">manage.py</a> migrate</p></blockquote></li></ul><h3 id="3-连接数据库">3.连接数据库</h3><ul><li>连接sqlite3数据库,并下载连接插件</li></ul><p><img src="D:/pro/Pictures/PixPin_2025-04-14_17-01-11.jpg" alt="PixPin_2025-04-14_17-01-11"></p><h1>站点管理</h1><ul><li><p>创建超级管理员</p><blockquote><p>python <a href="http://manage.py">manage.py</a> createsuperuser</p><p>python <a href="http://manage.py">manage.py</a> changepassword 用户名 # 重置密码</p></blockquote></li><li><p>登录站点：<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p></li></ul><h1>注册模型类</h1><ul><li>在子应用的admin文件</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register your models here.</span></span><br><span class="line"><span class="keyword">from</span> project.models <span class="keyword">import</span> BookInfo, PeopleInfo</span><br><span class="line"><span class="comment"># 注册模型</span></span><br><span class="line">admin.site.register(BookInfo)</span><br><span class="line">admin.site.register(PeopleInfo)</span><br><span class="line"><span class="comment"># 重新运行</span></span><br></pre></td></tr></table></figure><h3 id="添加测试用例">添加测试用例</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> bookinfo(name,pub_date,readcount,commentcount,is_delete) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;射雕英雄传&#x27;</span>,<span class="string">&#x27;1980-5-1&#x27;</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">0</span>),(<span class="string">&#x27;天龙八部&#x27;</span>,<span class="string">&#x27;1986-7-24&#x27;</span>,<span class="number">36</span>,<span class="number">40</span>,<span class="number">0</span>),(<span class="string">&#x27;笑傲江湖&#x27;</span>,<span class="string">&#x27;1995-12-24&#x27;</span>,<span class="number">20</span>,<span class="number">80</span>,<span class="number">0</span>),(<span class="string">&#x27;雪山飞狐&#x27;</span>,<span class="string">&#x27;1987-11-11&#x27;</span>,<span class="number">58</span>,<span class="number">24</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert into</span> peopleinfo(name,gender,book_id,description,is_delete) <span class="keyword">values</span> </span><br><span class="line">(<span class="string">&#x27;郭靖&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄蓉&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;打狗棍法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;黄药师&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;弹指神通&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;欧阳锋&#x27;</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;蛤功&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;梅超风&#x27;</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;九阴白骨爪&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;乔峰&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;降龙十八掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;段誉&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;六脉神剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;虚竹&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;天山六阳掌&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;王语嫣&#x27;</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="string">&#x27;神仙姐姐&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;令狐冲&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;独孤九剑&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;任盈盈&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;弹琴&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;岳不群&#x27;</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="string">&#x27;华山剑法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;东方不败&#x27;</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="string">&#x27;葵花宝典&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;胡斐&#x27;</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="string">&#x27;胡家刀法&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;苗若兰&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;黄衣&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;程灵素&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;医术&#x27;</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="string">&#x27;袁衣&#x27;</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="string">&#x27;六合拳&#x27;</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure><h2 id="shell工具">shell工具</h2><ul><li>所见即所得，在shell里测试代码</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1&gt;Session&lt;/h1&gt;
+    <summary type="html">&lt;h1&gt;ORM(对象关系映射)&lt;/h1&gt;
+&lt;h3 id=&quot;1-定义模型类&quot;&gt;1.定义模型类&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储&lt;/li&gt;
-&lt;li&gt;将session放入redis，放入内存&lt;/li&gt;
+&lt;li&gt;在models文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;面向对象&lt;/h1&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python开发1Redis</title>
+    <link href="https://wenblog.top/posts/68b27007.html"/>
+    <id>https://wenblog.top/posts/68b27007.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>1.Redis</h1><p><strong>Redis是一个高性能的Key-Value数据库</strong></p><ul><li>C语言编写的</li><li>实习缓存、队列系统的不同角色</li><li>中文网站（<a href="http://redis.cn">redis.cn</a>）</li></ul><h2 id="Redis特性（同其它可以-value缓存产品）">Redis特性（同其它可以-value缓存产品）</h2><ul><li>支持数据的持久化，即将内存的数据保存在磁盘上，重启时可再次加载</li><li>Redis不仅仅支持简单的kv类型的数据，还可提供list、set、zset、hash等数据结构的存储</li><li>支持数据备份，即master-slave模式的数据备份</li></ul><h2 id="Redis优势">Redis优势</h2><ul><li>性能极高</li><li>丰富的数据类型----支持二进制的Strings（字符串），Lists（列表），Hashes（哈希表），Sets（集合）及Ordered Sets（有序集合）数据类型操作</li><li>所有操作都是原子性的</li><li>丰富的特性—支持publish/subscribe（发布/订阅），通知，key过期等特性</li></ul><h2 id="Redis应用场景">Redis应用场景</h2><ul><li>用作缓存---------所有数据放在内存中（内存数据库）</li><li>特定场景替代传统数据库----比如社交类的应用</li><li>实现特定功能----session共享，购物车</li></ul><h2 id="Redis配置">Redis配置</h2><ul><li><p>查看配置信息：</p><blockquote><p>sudo vi 目录</p></blockquote></li><li><p>绑定ip</p><blockquote><p>bind 127.0.0.1 或真实ip</p></blockquote></li><li><p>端口，默认6379</p><blockquote><p>port 6379</p></blockquote></li><li><p>是否以守护进程运行（后台进程），推荐yes</p><blockquote><p>daemonize yes</p></blockquote></li><li><p>数据文件</p><blockquote><p>dbfilename dump.rdb</p></blockquote></li><li><p>数据文件存储路径</p><blockquote><p>dir /var/lib/redis</p></blockquote></li><li><p>日志文件</p><blockquote><p>logfile “/var/log/redis/redis-server.log”</p></blockquote></li><li><p>数据库默认16个</p><blockquote><p>database 16</p></blockquote></li><li><p>主从复制（双机备份）</p><blockquote><p>slaveof</p></blockquote></li></ul><h1>2.NoSQL</h1><ul><li>非关系型数据库（not only sql）</li><li>不支持sql语法</li><li>nosql存储数据都是kv形式</li><li>nosql数据库语言不通用</li><li>包括：Redis、Mongodb（<strong>蒙戈DB</strong>。“芒果DB”）存文档、Hbase hadoop（<strong>HBase哈杜普</strong>）处理海量数据、Cassandra hadoop（<strong>卡桑德拉 哈杜普</strong>）</li></ul><h2 id="NoSQL与SQL数据库区别：">NoSQL与SQL数据库区别：</h2><ul><li>sql数据库适用于关系特别复杂的数据查询场景，nosql反之；</li><li>sql对事务（要么一起成功，要么一起失败）的支持非常完善，nosql基本不支持事务</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;1.Redis&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Redis是一个高性能的Key-Value数据库&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;三大特性&lt;/</summary>
+&lt;li&gt;C语言编写的&lt;/li&gt;
+&lt;li&gt;实习缓存、队列系统的不同角色&lt;/li&gt;
+&lt;li&gt;中文网站（&lt;a href=&quot;http://redi</summary>
       
     
     
@@ -392,30 +392,6 @@
   </entry>
   
   <entry>
-    <title>bug</title>
-    <link href="https://wenblog.top/posts/358cbf14.html"/>
-    <id>https://wenblog.top/posts/358cbf14.html</id>
-    <published>2024-04-28T19:09:10.000Z</published>
-    <updated>2024-04-28T19:09:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’&quot;&gt;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’&lt;</summary>
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://wenblog.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="https://wenblog.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MEA-EFFormer</title>
     <link href="https://wenblog.top/posts/d3bdf607.html"/>
     <id>https://wenblog.top/posts/d3bdf607.html</id>
@@ -429,6 +405,30 @@
       
     <summary type="html">&lt;h1&gt;&lt;strong&gt;MEA-EFFormer：基于增强特征Transformer的多尺度有效注意力算法及其在高光谱图像分类中的应用&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.postimg.cc/0yD1hzbh/1714313204.png&quot;</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://wenblog.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://wenblog.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bug</title>
+    <link href="https://wenblog.top/posts/358cbf14.html"/>
+    <id>https://wenblog.top/posts/358cbf14.html</id>
+    <published>2024-04-28T19:09:10.000Z</published>
+    <updated>2024-04-28T19:09:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’">FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit_path      = <span class="string">&quot;e:/Datasets/LoveDA&quot;</span></span><br><span class="line">segfilepath     = os.path.join(VOCdevkit_path, <span class="string">&#x27;/SegmentationClass&#x27;</span>)</span><br></pre></td></tr></table></figure><p>'/SegmentationClass’加入“/”，从最后一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</p><p>输出：e:/SegmentationClass</p><p>正确输入：'SegmentationClass’会自动填补“/”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;FileNotFoundError-WinError-3-系统找不到指定的路径。-‘e-SegmentationClass’&quot;&gt;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: ‘e:/SegmentationClass’&lt;</summary>
       
     
     
