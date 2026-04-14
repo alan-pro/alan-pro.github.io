@@ -72,6 +72,32 @@
   </entry>
   
   <entry>
+    <title>python八股文2</title>
+    <link href="https://wenblog.top/posts/68b27005.html"/>
+    <id>https://wenblog.top/posts/68b27005.html</id>
+    <published>2025-03-25T20:01:16.000Z</published>
+    <updated>2025-03-25T20:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Python设计模式</h1><p>代码直戳: <a href="https://github.com/faif/python-patterns">https://github.com/faif/python-patterns</a></p><h1>创建型模式</h1><h2 id="工厂方法">工厂方法</h2><p>实例 -&gt; 类 -&gt; 类工厂</p><h2 id="抽象工厂">抽象工厂</h2><p>简单来说就是把一些具有相同方法的类再进行封装,抽象共同的方法以供调用.是工厂方法的进阶版本.</p><p>实例 -&gt; 类 -&gt; 类工厂 -&gt; 抽象工厂</p><h2 id="惰性初始化-Lazy-evaluation">惰性初始化 Lazy evaluation</h2><p>这个Python里可以使用@property实现,就是当调用的时候才生成.</p><h2 id="生成器-Builder">生成器 Builder</h2><p><img src="img/builder.png" alt=""></p><p>Builder模式主要用于构建一个复杂的对象，但这个对象构建的算法是稳定的，对象中的各个部分经常变化。Builder模式主要在于应对复杂对象各个部分的频繁需求变动。但是难以应对算法的需求变动。这点一定要注意，如果用错了，会带来很多不必要的麻烦。</p><p>重点是将复杂对象的建造过程抽象出来（抽象类别），使这个抽象过程的不同实现方法可以构造出不同表现（属性）的对象。</p><p>简单的说：子对象变化较频繁，对算法相对稳定。</p><h2 id="单例模式-Singleton">单例模式 Singleton</h2><p>一个类只有一个实例</p><h2 id="原型模式">原型模式</h2><p>特点是通过复制一个已经存在的实例来返回新的实例,而不是新建实例.</p><p>多用于创建复杂的或者耗时的实例,因为这种情况下,复制一个已经存在的实例使程序运行更高效;或者创建值相等,只是命名不一样的同类数据.</p><h2 id="对象池-Object-pool">对象池 Object pool</h2><p>一个对象池是一组已经初始化过且可以使用的对象，而可以不用在有需求时创建和销毁对象。池的用户可以从池子中取得对象，对其进行操作处理，并在不需要时归还给池子而非销毁 而不是销毁它.</p><p>在Python内部实现了对象池技术.例如像小整型这样的数据引用非常多,创建销毁都会消耗时间,所以保存在对象池里,减少开销.</p><h1>结构型模式</h1><h2 id="修饰模型-Decorator">修饰模型 Decorator</h2><p>Python里就是装饰器.</p><h2 id="代理模式-Proxy">代理模式 Proxy</h2><p>例如Python里的引用计数.</p><h1>行为型模式</h1><h2 id="迭代器">迭代器</h2><p>迭代容器里所有的元素.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;Python设计模式&lt;/h1&gt;
+&lt;p&gt;代码直戳: &lt;a href=&quot;https://github.com/faif/python-patterns&quot;&gt;https://github.com/faif/python-patterns&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;创建型模式&lt;/h1</summary>
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python八股文3</title>
     <link href="https://wenblog.top/posts/68b27006.html"/>
     <id>https://wenblog.top/posts/68b27006.html</id>
@@ -276,38 +302,6 @@
   </entry>
   
   <entry>
-    <title>python开发7Django</title>
-    <link href="https://wenblog.top/posts/bde0d894.html"/>
-    <id>https://wenblog.top/posts/bde0d894.html</id>
-    <published>2025-03-25T20:01:16.000Z</published>
-    <updated>2025-03-25T20:01:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>Session</h1><ul><li>Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储</li><li>将session放入redis，放入内存</li></ul><h1>面向对象</h1><ul><li><p>三大特性</p><p>封装：把属性和方法捆绑在一起，对外隐藏实现细节（类（Class）方法来封装属性和方法）</p><p>继承：允许一个子类获取父类的属性和方法，同时可以扩展和修改它们（子类重写方法，多继承（class view(a, b)））</p><p>多态：同一操作作用于不同的类的实例，会有不同的执行结果（使用相同方法调用不同类的实例，结果不同）</p></li></ul><h1>路由匹配类视图逻辑</h1><p>客户端发出请求，到服务器的总路由，再分配到子路由上，get（）和post（）方法发出响应到客户端</p><h1>多继承</h1><ul><li><p>一个类可以同时继承多个父类，遵循MEO（方法解析顺序）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可用(类名.___mro__) 或 类名.mro()</span><br></pre></td></tr></table></figure></li><li><p>MRO顺序</p><p><img src="C:/Users/pro/AppData/Roaming/Typora/typora-user-images/image-20250617194842568.png" alt="image-20250617194842568"></p></li></ul><h1>中间件</h1><p>在每次请求和响应之间执行的方法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__init__():初始化中间件时，自动调用一次</span><br><span class="line"></span><br><span class="line">process_request():请求前</span><br><span class="line"></span><br><span class="line">process_response():响应前</span><br></pre></td></tr></table></figure><h1>后端服务的项目架构</h1><p>数据存储服务：mysql</p><p>缓存服务：Redis</p><p>异步服务：Celery</p><p>消息队列：RabbitMQ、Redis、Kafka</p><p>文件存储服务：FastDFS</p><p>全文检索：Elasticsearch</p><p>部署：Nginx(负载均衡)+uwsgi</p><p>定时任务：Crontab</p><h1>同源</h1><p>需要协议，域名，端口号都相同</p><h1>CORS</h1><p>因为前端与后端不同源，使用cors实现跨域，设置白名单，前端可以获取后端的数据</p><h1>短信发送</h1><p>容联云网站，下载python版本的demo</p><p>短信验证码业务流程：</p><p>前端发送一个axios请求，包括手机号，验证码，图形验证码的UUID</p><p>后端接收请求参数，包括手机号，验证码，图形验证码的UUID</p><p>业务逻辑：验证参数，验证图片验证码，生成短信验证码，保存短信验证码，发送短信验证码</p><p>响应：返回响应{‘code’:0, ‘errmsg’:‘ok’}</p><h3 id="管道技术">管道技术</h3><p>通过一个队列，一次同时包含多个请求，降低服务器频繁调用radis，提高执行效率</p><h3 id="异步Celery">异步Celery</h3><ul><li>生产者-消费者模式，使用消息队列（中间人：broker）分割（解耦）协调生产者和消费者</li><li>消息队列不执行任务，存储和转发任务</li><li>Celery可以实现存储转发任务，也可以实现执行任务</li></ul><h3 id="记住密码">记住密码</h3><p>是设置session过期时间，不是浏览器的记住账号和密码</p><h3 id="itsdangerous数据加密">itsdangerous数据加密</h3><p>itsdangerous对openid进行加密和解密。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;Session&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储&lt;/li&gt;
-&lt;li&gt;将session放入redis，放入内存&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;面向对象&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;三大特性&lt;/</summary>
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机基础" scheme="https://wenblog.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>岗位需求</title>
     <link href="https://wenblog.top/posts/68b27001.html"/>
     <id>https://wenblog.top/posts/68b27001.html</id>
@@ -336,20 +330,26 @@
   </entry>
   
   <entry>
-    <title>python八股文2</title>
-    <link href="https://wenblog.top/posts/68b27005.html"/>
-    <id>https://wenblog.top/posts/68b27005.html</id>
+    <title>python开发7Django</title>
+    <link href="https://wenblog.top/posts/bde0d894.html"/>
+    <id>https://wenblog.top/posts/bde0d894.html</id>
     <published>2025-03-25T20:01:16.000Z</published>
     <updated>2025-03-25T20:01:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h1>Python设计模式</h1><p>代码直戳: <a href="https://github.com/faif/python-patterns">https://github.com/faif/python-patterns</a></p><h1>创建型模式</h1><h2 id="工厂方法">工厂方法</h2><p>实例 -&gt; 类 -&gt; 类工厂</p><h2 id="抽象工厂">抽象工厂</h2><p>简单来说就是把一些具有相同方法的类再进行封装,抽象共同的方法以供调用.是工厂方法的进阶版本.</p><p>实例 -&gt; 类 -&gt; 类工厂 -&gt; 抽象工厂</p><h2 id="惰性初始化-Lazy-evaluation">惰性初始化 Lazy evaluation</h2><p>这个Python里可以使用@property实现,就是当调用的时候才生成.</p><h2 id="生成器-Builder">生成器 Builder</h2><p><img src="img/builder.png" alt=""></p><p>Builder模式主要用于构建一个复杂的对象，但这个对象构建的算法是稳定的，对象中的各个部分经常变化。Builder模式主要在于应对复杂对象各个部分的频繁需求变动。但是难以应对算法的需求变动。这点一定要注意，如果用错了，会带来很多不必要的麻烦。</p><p>重点是将复杂对象的建造过程抽象出来（抽象类别），使这个抽象过程的不同实现方法可以构造出不同表现（属性）的对象。</p><p>简单的说：子对象变化较频繁，对算法相对稳定。</p><h2 id="单例模式-Singleton">单例模式 Singleton</h2><p>一个类只有一个实例</p><h2 id="原型模式">原型模式</h2><p>特点是通过复制一个已经存在的实例来返回新的实例,而不是新建实例.</p><p>多用于创建复杂的或者耗时的实例,因为这种情况下,复制一个已经存在的实例使程序运行更高效;或者创建值相等,只是命名不一样的同类数据.</p><h2 id="对象池-Object-pool">对象池 Object pool</h2><p>一个对象池是一组已经初始化过且可以使用的对象，而可以不用在有需求时创建和销毁对象。池的用户可以从池子中取得对象，对其进行操作处理，并在不需要时归还给池子而非销毁 而不是销毁它.</p><p>在Python内部实现了对象池技术.例如像小整型这样的数据引用非常多,创建销毁都会消耗时间,所以保存在对象池里,减少开销.</p><h1>结构型模式</h1><h2 id="修饰模型-Decorator">修饰模型 Decorator</h2><p>Python里就是装饰器.</p><h2 id="代理模式-Proxy">代理模式 Proxy</h2><p>例如Python里的引用计数.</p><h1>行为型模式</h1><h2 id="迭代器">迭代器</h2><p>迭代容器里所有的元素.</p>]]></content>
+    <content type="html"><![CDATA[<h1>Session</h1><ul><li>Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储</li><li>将session放入redis，放入内存</li></ul><h1>面向对象</h1><ul><li><p>三大特性</p><p>封装：把属性和方法捆绑在一起，对外隐藏实现细节（类（Class）方法来封装属性和方法）</p><p>继承：允许一个子类获取父类的属性和方法，同时可以扩展和修改它们（子类重写方法，多继承（class view(a, b)））</p><p>多态：同一操作作用于不同的类的实例，会有不同的执行结果（使用相同方法调用不同类的实例，结果不同）</p></li></ul><h1>路由匹配类视图逻辑</h1><p>客户端发出请求，到服务器的总路由，再分配到子路由上，get（）和post（）方法发出响应到客户端</p><h1>多继承</h1><ul><li><p>一个类可以同时继承多个父类，遵循MEO（方法解析顺序）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可用(类名.___mro__) 或 类名.mro()</span><br></pre></td></tr></table></figure></li><li><p>MRO顺序</p><p><img src="C:/Users/pro/AppData/Roaming/Typora/typora-user-images/image-20250617194842568.png" alt="image-20250617194842568"></p></li></ul><h1>中间件</h1><p>在每次请求和响应之间执行的方法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__init__():初始化中间件时，自动调用一次</span><br><span class="line"></span><br><span class="line">process_request():请求前</span><br><span class="line"></span><br><span class="line">process_response():响应前</span><br></pre></td></tr></table></figure><h1>后端服务的项目架构</h1><p>数据存储服务：mysql</p><p>缓存服务：Redis</p><p>异步服务：Celery</p><p>消息队列：RabbitMQ、Redis、Kafka</p><p>文件存储服务：FastDFS</p><p>全文检索：Elasticsearch</p><p>部署：Nginx(负载均衡)+uwsgi</p><p>定时任务：Crontab</p><h1>同源</h1><p>需要协议，域名，端口号都相同</p><h1>CORS</h1><p>因为前端与后端不同源，使用cors实现跨域，设置白名单，前端可以获取后端的数据</p><h1>短信发送</h1><p>容联云网站，下载python版本的demo</p><p>短信验证码业务流程：</p><p>前端发送一个axios请求，包括手机号，验证码，图形验证码的UUID</p><p>后端接收请求参数，包括手机号，验证码，图形验证码的UUID</p><p>业务逻辑：验证参数，验证图片验证码，生成短信验证码，保存短信验证码，发送短信验证码</p><p>响应：返回响应{‘code’:0, ‘errmsg’:‘ok’}</p><h3 id="管道技术">管道技术</h3><p>通过一个队列，一次同时包含多个请求，降低服务器频繁调用radis，提高执行效率</p><h3 id="异步Celery">异步Celery</h3><ul><li>生产者-消费者模式，使用消息队列（中间人：broker）分割（解耦）协调生产者和消费者</li><li>消息队列不执行任务，存储和转发任务</li><li>Celery可以实现存储转发任务，也可以实现执行任务</li></ul><h3 id="记住密码">记住密码</h3><p>是设置session过期时间，不是浏览器的记住账号和密码</p><h3 id="itsdangerous数据加密">itsdangerous数据加密</h3><p>itsdangerous对openid进行加密和解密。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1&gt;Python设计模式&lt;/h1&gt;
-&lt;p&gt;代码直戳: &lt;a href=&quot;https://github.com/faif/python-patterns&quot;&gt;https://github.com/faif/python-patterns&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;创建型模式&lt;/h1</summary>
+    <summary type="html">&lt;h1&gt;Session&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Django项目默认启动Session。可以保存在数据库或内存，也可以混合存储&lt;/li&gt;
+&lt;li&gt;将session放入redis，放入内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;面向对象&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;三大特性&lt;/</summary>
       
     
     

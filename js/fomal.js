@@ -2970,7 +2970,7 @@ function setColor(c) {
 
 // 星空背景开关
 if (localStorage.getItem("universe") == undefined) {
-  localStorage.setItem("universe", "block");
+  localStorage.setItem("universe", "none");
 }
 setUniverse2(localStorage.getItem("universe"));
 function setUniverse2(c) {
@@ -2987,7 +2987,7 @@ function setUniverse() {
 
 // 雪花开关
 if (localStorage.getItem("snow") == undefined) {
-  localStorage.setItem("snow", "block");
+  localStorage.setItem("snow", "none");  //none为关闭，block开启
 }
 document.getElementById("snow").style.display = localStorage.getItem("snow");
 function setSnow() {
@@ -3003,7 +3003,7 @@ function setSnow() {
 
 // 帧率监测开关
 if (localStorage.getItem("fpson") == undefined) {
-  localStorage.setItem("fpson", "1");
+  localStorage.setItem("fpson", "0");  //0关闭
 }
 function fpssw() {
   if (document.getElementById("fpson").checked) {
@@ -3021,7 +3021,7 @@ function reload() {
 
 // 侧边栏开关
 if (localStorage.getItem("rs") == undefined) {
-  localStorage.setItem("rs", "block");
+  localStorage.setItem("rs", "none");  //none关闭，block开启
 }
 if (localStorage.getItem("rs") == "block") {
   document.getElementById("rightSide").innerText = `:root{--rightside-display: block}`;
@@ -3176,12 +3176,7 @@ let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
 if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
-  document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://www.loliapi.com/acg/);
-    --darkmode-bg:url(https://www.loliapi.com/acg/);
-    --mobileday-bg: url(https://www.loliapi.com/acg/);
-    --mobilenight-bg: url(https://www.loliapi.com/acg/);
-  }`;
+  setBg(bingDayBg);
 }
 // 切换背景主函数
 function changeBg(s) {
@@ -3257,7 +3252,7 @@ function checkImgExists(imgurl) {
 
 // 黑夜霓虹灯开关
 if (localStorage.getItem("light") == undefined) {
-  localStorage.setItem("light", "true");
+  localStorage.setItem("light", "false");  //false关闭，true开启
 }
 // 这里要适配Pjax
 document.addEventListener('pjax:complete', function () {
@@ -3378,7 +3373,7 @@ function createWinbox() {
 
 
 <h2>二、字体设置</h2>
-{% note warning modern %}非商免字体未经授权只能个人使用。本站为完全非商业、非盈利性质的网站，平时用于个人学习交流，如有侵权请联系站长删除，谢谢！ —— 致版权方{% endnote %}
+<div style="background:rgba(255,193,7,0.15);border-left:4px solid #ffc107;padding:8px 12px;border-radius:4px;margin:8px 0;font-size:0.9em;">⚠️ 非商免字体未经授权只能个人使用。本站为完全非商业、非盈利性质的网站，平时用于个人学习交流，如有侵权请联系站长删除，谢谢！ —— 致版权方</div>
 <p id="swfs">
 <a class="swf" id="swf_ZhuZiAWan" href="javascript:;" rel="noopener external nofollow" style="font-family:'ZhuZiAWan'!important;color:black" onclick="setFont('ZhuZiAWan')">筑紫A丸标准体2.0</a>
 <a class="swf" id="swf_HYTMR" href="javascript:;" rel="noopener external nofollow" style="font-family:'HYTMR'!important;color:black" onclick="setFont('HYTMR')">汉仪唐美人</a>
@@ -3476,7 +3471,7 @@ function createWinbox() {
 -->
 
 <h3>1. 壁纸API</h3>
-{% folding cyan, 查看壁纸API系列背景 %}
+<details><summary style="cursor:pointer;color:var(--theme-color);font-weight:bold;">查看壁纸API系列背景</summary>
 <div class="bgbox">
 <a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a>
 <a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a>
@@ -3489,18 +3484,18 @@ function createWinbox() {
 <a id="baoluoBox" rel="noopener external nofollow" style="background-image: ${baoluo}" class="box apiBox" onclick="changeBg('${baoluo}')"></a>
 <a id="yingdaoBox" rel="noopener external nofollow" style="background-image: ${yingdao}" class="box apiBox" onclick="changeBg('${yingdao}')"></a>
 </div>
-{% endfolding %}
+</details>
 
 
 <h3>2. 自定义背景</h3>
-{% folding cyan, 设置自定义背景 %}
+<details><summary style="cursor:pointer;color:var(--theme-color);font-weight:bold;">设置自定义背景</summary>
 <p><center>
 <input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://i.postimg.cc/90jDg8B4/1702207491.png">
 </center></p>
 <p><center>
 <button type="button" onclick="getPicture()" style="background:var(--theme-color);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button>
 </center></p>
-{% endfolding %}
+</details>
 
 <br>
 <center><div style="font-size:1.2em;color:var(--theme-color);font-weight:bold;">------ ( •̀ ω •́ )y 到底啦 ------</div></center>
